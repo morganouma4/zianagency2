@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Insights — Zian Recruitment Agency</title>
+    <meta name="description" content="Latest news, community outreach, placement milestones and career tips from Zian Recruitment & Consultancy Agency Kenya.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <style>
+        :root {
+            --gold: #C9A84C;
+            --gold-light: #E8C96A;
+            --dark: #0A0A0F;
+            --dark-2: #111118;
+            --dark-3: #1A1A24;
+            --mid: #2A2A38;
+            --light: #F8F6F0;
+            --text-muted: #8A8A9A;
+            --white: #FFFFFF;
+            --serif: 'Cormorant Garamond', Georgia, serif;
+            --sans: 'DM Sans', sans-serif;
+            --mono: 'DM Mono', monospace;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--sans);
+            background: var(--dark);
+            color: var(--light);
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 2px;
+        }
+
+        /* HEADER */
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            padding: 20px 0;
+            transition: all 0.4s ease;
+        }
+
+            #header.scrolled {
+                background: rgba(10,10,15,0.95);
+                backdrop-filter: blur(12px);
+                padding: 12px 0;
+                border-bottom: 1px solid rgba(201,168,76,0.2);
+            }
+
+            #header .hcontainer {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 1300px;
+                margin: 0 auto;
+                padding: 0 30px;
+            }
+
+        .logo-text {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 36px;
+        }
+
+            nav ul li a {
+                font-family: var(--sans);
+                font-size: 0.8rem;
+                font-weight: 500;
+                color: rgba(248,246,240,0.7);
+                text-decoration: none;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                transition: color 0.3s;
+                position: relative;
+            }
+
+                nav ul li a::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -4px;
+                    left: 0;
+                    width: 0;
+                    height: 1px;
+                    background: var(--gold);
+                    transition: width 0.3s;
+                }
+
+                nav ul li a:hover, nav ul li a.active {
+                    color: var(--gold);
+                }
+
+                    nav ul li a:hover::after, nav ul li a.active::after {
+                        width: 100%;
+                    }
+
+        .nav-cta {
+            background: var(--gold) !important;
+            color: var(--dark) !important;
+            padding: 10px 24px !important;
+            border-radius: 2px !important;
+            font-weight: 600 !important;
+        }
+
+            .nav-cta::after {
+                display: none !important;
+            }
+
+        .mobile-nav-toggle {
+            display: none;
+            color: var(--gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* PAGE HERO */
+        .page-hero {
+            position: relative;
+            padding: 180px 0 100px;
+            background: var(--dark-2);
+            overflow: hidden;
+        }
+
+            .page-hero::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(201,168,76,0.07) 0%, transparent 70%);
+                pointer-events: none;
+            }
+
+        .page-hero-grid {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.04;
+            background-image: linear-gradient(rgba(201,168,76,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.5) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .page-hero .pcontainer {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .breadcrumb-trail {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--mono);
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            letter-spacing: 0.1em;
+            margin-bottom: 28px;
+        }
+
+            .breadcrumb-trail a {
+                color: var(--gold);
+                text-decoration: none;
+            }
+
+        .page-hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--mono);
+            font-size: 0.72rem;
+            color: var(--gold);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+            .page-hero-tag::before {
+                content: '';
+                display: block;
+                width: 32px;
+                height: 1px;
+                background: var(--gold);
+            }
+
+        .page-hero h1 {
+            font-family: var(--serif);
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            font-weight: 300;
+            line-height: 1.05;
+            color: var(--white);
+            max-width: 700px;
+        }
+
+            .page-hero h1 em {
+                font-style: italic;
+                color: var(--gold);
+            }
+
+        .page-hero p {
+            font-size: 1rem;
+            color: rgba(248,246,240,0.6);
+            line-height: 1.85;
+            max-width: 560px;
+            margin-top: 24px;
+        }
+
+        /* NEWS SECTION */
+        #news {
+            padding: 80px 0 100px;
+            background: var(--dark);
+        }
+
+        .ncontainer {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* FILTER BAR */
+        .filter-bar {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 56px;
+        }
+
+        .filter-btn {
+            font-family: var(--mono);
+            font-size: 0.68rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 9px 20px;
+            background: transparent;
+            border: 1px solid rgba(201,168,76,0.25);
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+            .filter-btn:hover {
+                border-color: var(--gold);
+                color: var(--gold);
+            }
+
+            .filter-btn.active {
+                background: var(--gold);
+                color: var(--dark);
+                border-color: var(--gold);
+                font-weight: 600;
+            }
+
+        /* FEATURED POST */
+        .featured-post {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 0;
+            margin-bottom: 32px;
+            background: var(--dark-3);
+            overflow: hidden;
+        }
+
+        .featured-img {
+            position: relative;
+            overflow: hidden;
+            height: 520px;
+        }
+
+            .featured-img img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.6s;
+                filter: grayscale(10%) brightness(0.85);
+            }
+
+        .featured-post:hover .featured-img img {
+            transform: scale(1.04);
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            background: var(--gold);
+            color: var(--dark);
+            font-family: var(--mono);
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            padding: 6px 14px;
+        }
+
+        .featured-body {
+            padding: 52px 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .featured-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 18px;
+        }
+
+            .featured-meta span {
+                display: flex;
+                align-items: center;
+                gap: 7px;
+                font-family: var(--mono);
+                font-size: 0.72rem;
+                color: var(--text-muted);
+            }
+
+                .featured-meta span i {
+                    color: var(--gold);
+                }
+
+        .featured-body h2 {
+            font-family: var(--serif);
+            font-size: clamp(1.5rem, 2.2vw, 2rem);
+            font-weight: 300;
+            color: var(--light);
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+            .featured-body h2 a {
+                color: inherit;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+                .featured-body h2 a:hover {
+                    color: var(--gold);
+                }
+
+        .featured-body p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.85;
+            margin-bottom: 32px;
+        }
+
+        .read-more-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: gap 0.3s;
+        }
+
+            .read-more-link:hover {
+                gap: 16px;
+                color: var(--gold-light);
+            }
+
+        /* NEWS GRID — mosaic */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            gap: 2px;
+        }
+
+        .news-card {
+            background: var(--dark-3);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: background 0.3s;
+        }
+
+            .news-card:hover {
+                background: var(--mid);
+            }
+        /* wide card spans 2 columns */
+        .news-wide {
+            grid-column: span 2;
+            flex-direction: row;
+        }
+
+        .card-img-wrap {
+            overflow: hidden;
+            height: 220px;
+            flex-shrink: 0;
+        }
+
+        .news-wide .card-img-wrap {
+            width: 44%;
+            height: auto;
+            min-height: 260px;
+        }
+
+        .card-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.55s;
+            filter: grayscale(12%) brightness(0.85);
+        }
+
+        .news-card:hover .card-img-wrap img {
+            transform: scale(1.05);
+            filter: grayscale(0%) brightness(0.9);
+        }
+
+        .card-body {
+            padding: 28px 30px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .card-category {
+            display: inline-block;
+            font-family: var(--mono);
+            font-size: 0.62rem;
+            color: var(--gold);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            border: 1px solid rgba(201,168,76,0.3);
+            padding: 4px 10px;
+            margin-bottom: 14px;
+            width: fit-content;
+        }
+
+        .card-meta {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 14px;
+        }
+
+            .card-meta span {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                font-family: var(--mono);
+                font-size: 0.68rem;
+                color: var(--text-muted);
+            }
+
+                .card-meta span i {
+                    color: var(--gold);
+                    font-size: 0.8rem;
+                }
+
+        .card-body h4 {
+            font-family: var(--serif);
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--light);
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+
+        .news-wide .card-body h4 {
+            font-size: 1.45rem;
+        }
+
+        .card-body h4 a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+            .card-body h4 a:hover {
+                color: var(--gold);
+            }
+
+        .card-body p {
+            font-size: 0.83rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            flex: 1;
+            margin-bottom: 20px;
+        }
+
+        .card-footer-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: auto;
+        }
+
+        .card-read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.73rem;
+            font-weight: 600;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: gap 0.3s;
+        }
+
+            .card-read-more:hover {
+                gap: 13px;
+                color: var(--gold-light);
+            }
+
+        .share-btn {
+            background: transparent;
+            border: 1px solid rgba(201,168,76,0.2);
+            color: var(--text-muted);
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+            .share-btn:hover {
+                background: var(--gold);
+                color: var(--dark);
+                border-color: var(--gold);
+            }
+
+        /* CTA BAND */
+        #cta-band {
+            background: var(--gold);
+            padding: 80px 0;
+        }
+
+        .cta-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 48px;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        #cta-band h2 {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            font-weight: 300;
+            color: var(--dark);
+            line-height: 1.2;
+        }
+
+            #cta-band h2 strong {
+                font-weight: 700;
+            }
+
+        .cta-actions {
+            display: flex;
+            gap: 14px;
+            flex-shrink: 0;
+        }
+
+        .btn-dark {
+            background: var(--dark);
+            color: var(--gold);
+            padding: 16px 36px;
+            font-family: var(--sans);
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+            .btn-dark:hover {
+                background: var(--dark-3);
+                color: var(--gold-light);
+                transform: translateY(-2px);
+            }
+
+        .btn-outline-dark {
+            background: transparent;
+            color: var(--dark);
+            padding: 15px 36px;
+            font-family: var(--sans);
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 2px solid var(--dark);
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+            .btn-outline-dark:hover {
+                background: var(--dark);
+                color: var(--gold);
+            }
+
+        /* FOOTER */
+        footer {
+            background: var(--dark);
+            border-top: 1px solid rgba(201,168,76,0.15);
+        }
+
+        .footer-top {
+            padding: 80px 0 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        .footer-brand p {
+            font-size: 0.87rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-top: 20px;
+            max-width: 300px;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 14px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+            .footer-contact-item i {
+                color: var(--gold);
+                margin-top: 2px;
+                flex-shrink: 0;
+            }
+
+        .footer-col h5 {
+            font-family: var(--serif);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--light);
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(201,168,76,0.2);
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+            .footer-col ul li a {
+                font-size: 0.85rem;
+                color: var(--text-muted);
+                text-decoration: none;
+                transition: color 0.3s;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+                .footer-col ul li a i {
+                    color: var(--gold);
+                    font-size: 0.7rem;
+                }
+
+                .footer-col ul li a:hover {
+                    color: var(--gold);
+                }
+
+        .footer-socials {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .footer-social {
+            width: 38px;
+            height: 38px;
+            border: 1px solid rgba(201,168,76,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+            .footer-social:hover {
+                background: var(--gold);
+                color: var(--dark);
+                border-color: var(--gold);
+            }
+
+        .footer-newsletter-form {
+            display: flex;
+            margin-top: 16px;
+        }
+
+            .footer-newsletter-form input {
+                flex: 1;
+                background: var(--dark-3);
+                border: 1px solid rgba(201,168,76,0.2);
+                border-right: none;
+                padding: 10px 16px;
+                color: var(--light);
+                font-family: var(--sans);
+                font-size: 0.82rem;
+                outline: none;
+            }
+
+            .footer-newsletter-form button {
+                background: var(--gold);
+                border: none;
+                padding: 10px 18px;
+                color: var(--dark);
+                font-size: 1rem;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+
+                .footer-newsletter-form button:hover {
+                    background: var(--gold-light);
+                }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 24px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+            .footer-bottom p {
+                font-size: 0.8rem;
+                color: var(--text-muted);
+            }
+
+            .footer-bottom a {
+                color: var(--gold);
+                text-decoration: none;
+            }
+
+        #back-to-top {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            width: 44px;
+            height: 44px;
+            background: var(--gold);
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s, transform 0.3s;
+            z-index: 998;
+            text-decoration: none;
+        }
+
+            #back-to-top.visible {
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            #back-to-top:hover {
+                transform: translateY(-4px);
+            }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .featured-post {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-img {
+                height: 360px;
+            }
+
+            .news-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .news-wide {
+                grid-column: span 2;
+                flex-direction: row;
+            }
+
+                .news-wide .card-img-wrap {
+                    width: 45%;
+                }
+        }
+
+        @media (max-width: 992px) {
+            nav {
+                display: none;
+            }
+
+                nav.open {
+                    display: flex;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: var(--dark);
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 998;
+                }
+
+                    nav.open ul {
+                        flex-direction: column;
+                        gap: 28px;
+                        text-align: center;
+                    }
+
+                        nav.open ul li a {
+                            font-size: 1.1rem;
+                        }
+
+            .mobile-nav-toggle {
+                display: block;
+                z-index: 999;
+                position: relative;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+
+            .cta-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .news-wide {
+                grid-column: span 1;
+                flex-direction: column;
+            }
+
+                .news-wide .card-img-wrap {
+                    width: 100%;
+                    height: 220px;
+                }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-bar {
+                gap: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="header">
+        <div class="hcontainer">
+            <h1 class="logo me-auto">
+                <a href="index.html">
+                    <img src="2D on transparent background.png" style="width: 125px;">
+                </a>
+            </h1>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="inner-page.html">Services</a></li>
+                    <li><a href="recruitment.html">Recruitment</a></li>
+                    <li><a href="portfolio-details.html">Job Seekers</a></li>
+                    <li><a href="news.html" class="active">News</a></li>
+                    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+                </ul>
+            </nav>
+            <i class="bi bi-list mobile-nav-toggle" id="mobile-toggle"></i>
+        </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+        <div class="page-hero-grid"></div>
+        <div class="pcontainer">
+            <div class="breadcrumb-trail">
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <span>News & Insights</span>
+            </div>
+            <div class="page-hero-tag">Stories & Updates</div>
+            <h1>News &amp; <em>Community</em><br>Insights</h1>
+            <p>Stay updated with our latest placement milestones, community outreach events, career guidance, and agency announcements from across Kenya and beyond.</p>
+        </div>
+    </div>
+
+    <!-- NEWS -->
+    <section id="news">
+        <div class="ncontainer">
+
+            <!-- FILTER BAR -->
+            <div class="filter-bar" data-aos="fade-up">
+                <button class="filter-btn active" onclick="filterNews(this,'all')">All</button>
+                <button class="filter-btn" onclick="filterNews(this,'Community Outreach')">Community Outreach</button>
+                <button class="filter-btn" onclick="filterNews(this,'Placement Milestone')">Placement Milestones</button>
+                <button class="filter-btn" onclick="filterNews(this,'Agency Updates')">Agency Updates</button>
+                <button class="filter-btn" onclick="filterNews(this,'Career Tips')">Career Tips</button>
+            </div>
+
+            <!-- FEATURED POST -->
+            <!--
+              Image: African woman facilitating a professional workshop/seminar
+              Unsplash - Christina @ wocintechchat.com (free to use)
+            -->
+            <div class="featured-post" data-aos="fade-up" data-category="Community Outreach">
+                <div class="featured-img">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=900&q=80"
+                         alt="Career Workshop Nairobi — African woman facilitating session">
+                    <div class="featured-badge">Featured</div>
+                </div>
+                <div class="featured-body">
+                    <div class="featured-meta">
+                        <span><i class="bx bx-calendar"></i> October 12, 2025</span>
+                        <span><i class="bx bx-folder"></i> Community Outreach</span>
+                    </div>
+                    <h2><a href="#">Zian Hosts Career-Readiness Workshop for 200+ Nairobi Youth — Empowering the Next Generation of Global Professionals</a></h2>
+                    <p>Our flagship youth empowerment seminar brought together over 200 young Nairobians for a full-day workshop on international job application strategies, CV writing, interview preparation, and self-employment skills. Partnering with local educational institutions and career coaches, Zian Recruitment equipped participants with the practical tools needed to access both local and overseas opportunities — proving that the pathway to a global career begins right here in Kenya.</p>
+                    <a href="#" class="read-more-link">Read Full Article <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- NEWS GRID -->
+            <div class="news-grid" id="news-grid">
+
+                <!-- Card 1: Departure Milestone — wide -->
+                <!--
+                  Image: Group of African professionals in smart attire, pre-departure celebration feel
+                  Unsplash - Amy Hirschi (free to use)
+                -->
+                <div class="news-card news-wide" data-aos="fade-up" data-aos-delay="100" data-category="Placement Milestone">
+                    <div class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"
+                             alt="Kenyan professionals pre-departure Qatar">
+                    </div>
+                    <div class="card-body" style="padding:36px 40px; display:flex; flex-direction:column; justify-content:center;">
+                        <span class="card-category">Placement Milestone</span>
+                        <div class="card-meta">
+                            <span><i class="bx bx-calendar"></i> January 5, 2026</span>
+                            <span><i class="bx bx-user"></i> Zian Team</span>
+                        </div>
+                        <h4><a href="#">48 Kenyan Professionals Begin International Careers in Qatar — A Landmark Pre-Departure Celebration</a></h4>
+                        <p>In a landmark moment for Zian Recruitment, 48 carefully vetted Kenyan professionals recently completed their pre-departure orientation and departed for exciting career placements across Qatar's healthcare, hospitality, and aviation sectors. From nurses joining leading Gulf hospitals to cabin crew joining regional airlines, this cohort represents the very best of Kenya's emerging professional workforce.</p>
+                        <div class="card-footer-row">
+                            <a href="#" class="card-read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                            <button class="share-btn"><i class="bx bx-share-alt"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: New Partnerships -->
+                <!--
+                  Image: African man presenting / business meeting
+                  Unsplash - Mapbox (free to use)
+                -->
+                <div class="news-card" data-aos="fade-up" data-aos-delay="200" data-category="Agency Updates">
+                    <div class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=700&q=80"
+                             alt="Business partnership agreement meeting">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-category">Agency Updates</span>
+                        <div class="card-meta">
+                            <span><i class="bx bx-calendar"></i> March 22, 2026</span>
+                            <span><i class="bx bx-folder"></i> Partnerships</span>
+                        </div>
+                        <h4><a href="#">Zian Announces Strategic Partnerships with European & Canadian Agencies for 2026</a></h4>
+                        <p>Expanding our international footprint, Zian has formalised new placement agreements with partner agencies in Portugal, Hungary, and Ontario — opening hundreds of new pathways for Kenyan professionals in construction, caregiving, and IT.</p>
+                        <div class="card-footer-row">
+                            <a href="#" class="card-read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                            <button class="share-btn"><i class="bx bx-share-alt"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Digital Portal -->
+                <!--
+                  Image: African man using tablet/laptop — tech context
+                  Unsplash - Desola Lanre-Ologun (free to use)
+                -->
+                <div class="news-card" data-aos="fade-up" data-aos-delay="100" data-category="Agency Updates">
+                    <div class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1573497019236-17f8177b81e8?w=700&q=80"
+                             alt="African professional using digital portal tablet">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-category">Agency Updates</span>
+                        <div class="card-meta">
+                            <span><i class="bx bx-calendar"></i> February 14, 2026</span>
+                            <span><i class="bx bx-folder"></i> Technology</span>
+                        </div>
+                        <h4><a href="#">New Digital Job Seeker Portal Launching Mid-2026 — Real-Time Application Tracking for Candidates</a></h4>
+                        <p>Zian is investing in a purpose-built applicant portal that will allow job seekers to submit applications, upload documents, track visa processing timelines, and communicate directly with our team — all from one dashboard.</p>
+                        <div class="card-footer-row">
+                            <a href="#" class="card-read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                            <button class="share-btn"><i class="bx bx-share-alt"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Mombasa Career Fair -->
+                <!--
+                  Image: African women professionals / graduates smiling
+                  Unsplash - Christina @ wocintechchat.com (free to use)
+                -->
+                <div class="news-card" data-aos="fade-up" data-aos-delay="150" data-category="Community Outreach">
+                    <div class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=700&q=80"
+                             alt="Mombasa youth career fair graduates">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-category">Community Outreach</span>
+                        <div class="card-meta">
+                            <span><i class="bx bx-calendar"></i> November 28, 2025</span>
+                            <span><i class="bx bx-folder"></i> Training</span>
+                        </div>
+                        <h4><a href="#">Mombasa Youth Career Fair Draws 350+ Attendees from Kenya's Coastal Region</a></h4>
+                        <p>Our Coast-region career fair connected hundreds of young graduates and school leavers with potential employers and Zian's overseas placement pipeline, with on-the-spot CV assessments from our HR specialists.</p>
+                        <div class="card-footer-row">
+                            <a href="#" class="card-read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                            <button class="share-btn"><i class="bx bx-share-alt"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Awards -->
+                <!--
+                  Image: Professional award ceremony / certificate — diverse context
+                  Unsplash - MD Duran (free to use)
+                -->
+                <div class="news-card" data-aos="fade-up" data-aos-delay="200" data-category="Recognition">
+                    <div class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=700&q=80"
+                             alt="Kenya Recruitment Excellence Award ceremony">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-category">Recognition</span>
+                        <div class="card-meta">
+                            <span><i class="bx bx-calendar"></i> January 20, 2024</span>
+                            <span><i class="bx bx-folder"></i> Awards</span>
+                        </div>
+                        <h4><a href="#">Zian Recruitment Recognised at Kenya Recruitment Excellence Awards 2024</a></h4>
+                        <p>Less than a year after launching, Zian Recruitment was recognised among Kenya's most promising new recruitment agencies, receiving a certificate of excellence at the annual Kenya HR industry awards in Nairobi.</p>
+                        <div class="card-footer-row">
+                            <a href="#" class="card-read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                            <button class="share-btn"><i class="bx bx-share-alt"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Career Tips -->
+                <!--
+                  Image: African man in suit outdoors — confident professional
+                  Unsplash - Manny Moreno (free to use)
+                -->
+                <div class="news-card" data-aos="fade-up" data-aos-delay="100" data-category="Career Tips">
+                    <div class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&q=80"
+                             alt="Kenyan professional career advice abroad">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-category">Career Tips</span>
+                        <div class="card-meta">
+                            <span><i class="bx bx-calendar"></i> April 3, 2026</span>
+                            <span><i class="bx bx-folder"></i> Guidance</span>
+                        </div>
+                        <h4><a href="#">5 Things Every Kenyan Professional Should Know Before Applying for Jobs Abroad</a></h4>
+                        <p>From understanding work permit categories to knowing your rights as an overseas worker — our recruitment specialists share the essential knowledge every candidate needs before taking the leap into international employment.</p>
+                        <div class="card-footer-row">
+                            <a href="#" class="card-read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                            <button class="share-btn"><i class="bx bx-share-alt"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- end news-grid -->
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta-band">
+        <div class="cta-inner">
+            <h2>Ready to start your<br><strong>global career journey?</strong></h2>
+            <div class="cta-actions">
+                <a href="portfolio-details.html" class="btn-dark">Apply Now <i class="bi bi-arrow-right"></i></a>
+                <a href="contact.html" class="btn-outline-dark">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo-text">ZIAN</a>
+                    <p>Kenya's premier recruitment and consultancy agency connecting talented professionals to life-changing opportunities at home and across the globe.</p>
+                    <div class="footer-contact-item"><i class="bx bx-map"></i><span>Nyali, Fidel Odinga Rd. East Wing, Mombasa 5338-80100, Kenya</span></div>
+                    <div class="footer-contact-item"><i class="bx bx-phone"></i><span>+254 113 815 796 / +254 716 078 596</span></div>
+                    <div class="footer-contact-item"><i class="bx bx-envelope"></i><span>enquiry@zianagency.co.ke</span></div>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com/profile.php?id=100094303042295" class="footer-social"><i class="bx bxl-facebook"></i></a>
+                        <a href="#" class="footer-social"><i class="bx bxl-twitter"></i></a>
+                        <a href="#" class="footer-social"><i class="bx bxl-instagram"></i></a>
+                        <a href="#" class="footer-social"><i class="bx bxl-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Navigate</h5>
+                    <ul>
+                        <li><a href="index.html"><i class="bx bx-chevron-right"></i>Home</a></li>
+                        <li><a href="index.html#about"><i class="bx bx-chevron-right"></i>About Us</a></li>
+                        <li><a href="inner-page.html"><i class="bx bx-chevron-right"></i>Services</a></li>
+                        <li><a href="recruitment.html"><i class="bx bx-chevron-right"></i>Recruitment</a></li>
+                        <li><a href="portfolio-details.html"><i class="bx bx-chevron-right"></i>Job Seekers</a></li>
+                        <li><a href="news.html"><i class="bx bx-chevron-right"></i>News & Blog</a></li>
+                        <li><a href="contact.html"><i class="bx bx-chevron-right"></i>Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Popular Jobs</h5>
+                    <ul>
+                        <li><a href="#"><i class="bx bx-chevron-right"></i>Accountants</a></li>
+                        <li><a href="#"><i class="bx bx-chevron-right"></i>Hospitality</a></li>
+                        <li><a href="#"><i class="bx bx-chevron-right"></i>Managers</a></li>
+                        <li><a href="#"><i class="bx bx-chevron-right"></i>Drivers</a></li>
+                        <li><a href="#"><i class="bx bx-chevron-right"></i>Airport Attendants</a></li>
+                        <li><a href="#"><i class="bx bx-chevron-right"></i>Healthcare Workers</a></li>
+                        <li><a href="#"><i class="bx bx-chevron-right"></i>Engineers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Newsletter</h5>
+                    <p style="font-size:0.83rem;color:var(--text-muted);line-height:1.7;margin-bottom:0;">Get the latest job opportunities and agency news delivered to your inbox.</p>
+                    <form class="footer-newsletter-form" action="https://formsubmit.co/enquiry@zianagency.co.ke" method="post">
+                        <input type="email" name="email" placeholder="Your email">
+                        <button type="submit"><i class="bi bi-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 <strong>Zian Recruitment & Consultancy Agency Ltd.</strong> All Rights Reserved.</p>
+            <p>Designed by <a href="https://sagecope.github.io/agency/">Sage Cope</a></p>
+        </div>
+    </footer>
+
+    <a href="#" id="back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-out', once: true, offset: 60 });
+
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+            document.getElementById('back-to-top').classList.toggle('visible', window.scrollY > 400);
+        });
+
+        const toggle = document.getElementById('mobile-toggle');
+        const nav = document.getElementById('navbar');
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('open');
+            toggle.className = nav.classList.contains('open') ? 'bi bi-x mobile-nav-toggle' : 'bi bi-list mobile-nav-toggle';
+        });
+
+        function filterNews(btn, category) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const cards = document.querySelectorAll('#news-grid .news-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
