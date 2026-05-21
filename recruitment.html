@@ -1,262 +1,1113 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruitment Services — Zian Recruitment Agency</title>
+    <meta name="description" content="Large scale employment assignments, psychometric testing, HR audits, payroll support and performance evaluations by Zian Recruitment Agency.">
 
-  <title>Zian Recruitment Agency - contact us</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="2D on transparent background.png" rel="shortcut icon" type="image/png" />
+    <style>
+        :root {
+            --gold: #C9A84C;
+            --gold-light: #E8C96A;
+            --dark: #0A0A0F;
+            --dark-2: #111118;
+            --dark-3: #1A1A24;
+            --mid: #2A2A38;
+            --light: #F8F6F0;
+            --text-muted: #8A8A9A;
+            --white: #FFFFFF;
+            --serif: 'Cormorant Garamond', Georgia, serif;
+            --sans: 'DM Sans', sans-serif;
+            --mono: 'DM Mono', monospace;
+        }
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--sans);
+            background: var(--dark);
+            color: var(--light);
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 2px;
+        }
+
+        /* HEADER */
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            padding: 20px 0;
+            transition: all 0.4s ease;
+        }
+
+            #header.scrolled {
+                background: rgba(10,10,15,0.95);
+                backdrop-filter: blur(12px);
+                padding: 12px 0;
+                border-bottom: 1px solid rgba(201,168,76,0.2);
+            }
+
+            #header .container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 1300px;
+                margin: 0 auto;
+                padding: 0 30px;
+            }
+
+        .logo-text {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 36px;
+        }
+
+            nav ul li a {
+                font-family: var(--sans);
+                font-size: 0.8rem;
+                font-weight: 500;
+                color: rgba(248,246,240,0.7);
+                text-decoration: none;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                transition: color 0.3s;
+                position: relative;
+            }
+
+                nav ul li a::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -4px;
+                    left: 0;
+                    width: 0;
+                    height: 1px;
+                    background: var(--gold);
+                    transition: width 0.3s;
+                }
+
+                nav ul li a:hover, nav ul li a.active {
+                    color: var(--gold);
+                }
+
+                    nav ul li a:hover::after, nav ul li a.active::after {
+                        width: 100%;
+                    }
+
+        .nav-cta {
+            background: var(--gold) !important;
+            color: var(--dark) !important;
+            padding: 10px 24px !important;
+            border-radius: 2px !important;
+            font-weight: 600 !important;
+        }
+
+            .nav-cta::after {
+                display: none !important;
+            }
+
+        .mobile-nav-toggle {
+            display: none;
+            color: var(--gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* PAGE HERO */
+        .page-hero {
+            position: relative;
+            padding: 180px 0 100px;
+            background: var(--dark-2);
+            overflow: hidden;
+        }
+
+            .page-hero::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(201,168,76,0.07) 0%, transparent 70%);
+                pointer-events: none;
+            }
+
+        .page-hero-grid {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.04;
+            background-image: linear-gradient(rgba(201,168,76,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.5) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .page-hero .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .breadcrumb-trail {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--mono);
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            letter-spacing: 0.1em;
+            margin-bottom: 28px;
+        }
+
+            .breadcrumb-trail a {
+                color: var(--gold);
+                text-decoration: none;
+            }
+
+        .page-hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--mono);
+            font-size: 0.72rem;
+            color: var(--gold);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+            .page-hero-tag::before {
+                content: '';
+                display: block;
+                width: 32px;
+                height: 1px;
+                background: var(--gold);
+            }
+
+        .page-hero h1 {
+            font-family: var(--serif);
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            font-weight: 300;
+            line-height: 1.05;
+            color: var(--white);
+            max-width: 700px;
+        }
+
+            .page-hero h1 em {
+                font-style: italic;
+                color: var(--gold);
+            }
+
+        .page-hero p {
+            font-size: 1rem;
+            color: rgba(248,246,240,0.6);
+            line-height: 1.85;
+            max-width: 580px;
+            margin-top: 24px;
+        }
+
+        /* SHARED */
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--gold);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+            .section-label::before {
+                content: '';
+                width: 24px;
+                height: 1px;
+                background: var(--gold);
+            }
+
+        .section-heading {
+            font-family: var(--serif);
+            font-size: clamp(2.2rem, 4vw, 3.6rem);
+            font-weight: 300;
+            line-height: 1.15;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+            .section-heading em {
+                font-style: italic;
+                color: var(--gold);
+            }
+
+        .section-body {
+            font-size: 0.97rem;
+            color: var(--text-muted);
+            line-height: 1.85;
+            max-width: 600px;
+        }
+
+        /* LARGE SCALE INTRO */
+        #large-scale {
+            background: var(--dark-3);
+        }
+
+        .large-scale-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .scale-stat-cluster {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+        }
+
+        .scale-stat {
+            background: var(--dark-2);
+            padding: 36px 28px;
+            border-bottom: 3px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+            .scale-stat:hover {
+                border-bottom-color: var(--gold);
+            }
+
+        .scale-stat-num {
+            font-family: var(--serif);
+            font-size: 3rem;
+            font-weight: 600;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .scale-stat-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-top: 6px;
+        }
+
+        /* SERVICES DETAIL */
+        #services-detail {
+            background: var(--dark-2);
+        }
+
+        .services-detail-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2px;
+            margin-top: 60px;
+        }
+
+        .sd-card {
+            background: var(--dark-3);
+            padding: 48px 40px;
+            display: flex;
+            align-items: flex-start;
+            gap: 28px;
+            position: relative;
+            overflow: hidden;
+            transition: background 0.4s;
+        }
+
+            .sd-card:hover {
+                background: var(--mid);
+            }
+
+            .sd-card::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 3px;
+                background: var(--gold);
+                transform: scaleY(0);
+                transform-origin: bottom;
+                transition: transform 0.4s;
+            }
+
+            .sd-card:hover::after {
+                transform: scaleY(1);
+            }
+
+        .sd-img-wrap {
+            width: 80px;
+            height: 80px;
+            flex-shrink: 0;
+            background: rgba(201,168,76,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+            .sd-img-wrap img {
+                width: 52px;
+                height: 52px;
+                object-fit: contain;
+                filter: brightness(0) invert(1);
+                opacity: 0.7;
+                transition: opacity 0.3s;
+            }
+
+        .sd-card:hover .sd-img-wrap img {
+            opacity: 1;
+            filter: brightness(0.8) sepia(1) saturate(3) hue-rotate(5deg);
+        }
+
+        .sd-body {
+        }
+
+        .sd-num {
+            font-family: var(--mono);
+            font-size: 0.65rem;
+            color: var(--gold);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .sd-body h3 {
+            font-family: var(--serif);
+            font-size: 1.55rem;
+            font-weight: 400;
+            color: var(--light);
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .sd-body .sd-lead {
+            font-size: 0.9rem;
+            color: rgba(248,246,240,0.75);
+            line-height: 1.7;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .sd-body p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        /* PROCESS */
+        #process {
+            background: var(--dark-3);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            margin-top: 60px;
+            position: relative;
+        }
+
+            .process-steps::before {
+                content: '';
+                position: absolute;
+                top: 36px;
+                left: 10%;
+                right: 10%;
+                height: 1px;
+                background: linear-gradient(90deg, transparent, rgba(201,168,76,0.3), rgba(201,168,76,0.3), transparent);
+                pointer-events: none;
+            }
+
+        .process-step {
+            padding: 0 28px 0 0;
+            position: relative;
+        }
+
+        .step-num {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            border: 1px solid rgba(201,168,76,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--serif);
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 24px;
+            background: var(--dark-3);
+            position: relative;
+            z-index: 1;
+            transition: background 0.3s, border-color 0.3s;
+        }
+
+        .process-step:hover .step-num {
+            background: var(--gold);
+            color: var(--dark);
+            border-color: var(--gold);
+        }
+
+        .process-step h4 {
+            font-family: var(--serif);
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--light);
+            margin-bottom: 10px;
+        }
+
+        .process-step p {
+            font-size: 0.83rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+        }
+
+        /* CTA BAND */
+        #cta-band {
+            background: var(--gold);
+            padding: 80px 0;
+        }
+
+        .cta-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 48px;
+        }
+
+        #cta-band h2 {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            font-weight: 300;
+            color: var(--dark);
+            line-height: 1.2;
+        }
+
+            #cta-band h2 strong {
+                font-weight: 700;
+            }
+
+        .cta-actions {
+            display: flex;
+            gap: 14px;
+            flex-shrink: 0;
+        }
+
+        .btn-dark {
+            background: var(--dark);
+            color: var(--gold);
+            padding: 16px 36px;
+            font-family: var(--sans);
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+            .btn-dark:hover {
+                background: var(--dark-3);
+                color: var(--gold-light);
+                transform: translateY(-2px);
+            }
+
+        .btn-outline-dark {
+            background: transparent;
+            color: var(--dark);
+            padding: 15px 36px;
+            font-family: var(--sans);
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 2px solid var(--dark);
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+            .btn-outline-dark:hover {
+                background: var(--dark);
+                color: var(--gold);
+            }
+
+        /* FOOTER */
+        footer {
+            background: var(--dark);
+            border-top: 1px solid rgba(201,168,76,0.15);
+        }
+
+        .footer-top {
+            padding: 80px 0 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+        }
+
+        .footer-brand p {
+            font-size: 0.87rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-top: 20px;
+            max-width: 300px;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 14px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+            .footer-contact-item i {
+                color: var(--gold);
+                margin-top: 2px;
+                flex-shrink: 0;
+            }
+
+        .footer-col h5 {
+            font-family: var(--serif);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--light);
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(201,168,76,0.2);
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+            .footer-col ul li a {
+                font-size: 0.85rem;
+                color: var(--text-muted);
+                text-decoration: none;
+                transition: color 0.3s;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+                .footer-col ul li a i {
+                    color: var(--gold);
+                    font-size: 0.7rem;
+                }
+
+                .footer-col ul li a:hover {
+                    color: var(--gold);
+                }
+
+        .footer-socials {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .footer-social {
+            width: 38px;
+            height: 38px;
+            border: 1px solid rgba(201,168,76,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+            .footer-social:hover {
+                background: var(--gold);
+                color: var(--dark);
+                border-color: var(--gold);
+            }
+
+        .footer-newsletter-form {
+            display: flex;
+            margin-top: 16px;
+        }
+
+            .footer-newsletter-form input {
+                flex: 1;
+                background: var(--dark-3);
+                border: 1px solid rgba(201,168,76,0.2);
+                border-right: none;
+                padding: 10px 16px;
+                color: var(--light);
+                font-family: var(--sans);
+                font-size: 0.82rem;
+                outline: none;
+            }
+
+            .footer-newsletter-form button {
+                background: var(--gold);
+                border: none;
+                padding: 10px 18px;
+                color: var(--dark);
+                font-size: 1rem;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+
+                .footer-newsletter-form button:hover {
+                    background: var(--gold-light);
+                }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 24px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+            .footer-bottom p {
+                font-size: 0.8rem;
+                color: var(--text-muted);
+            }
+
+            .footer-bottom a {
+                color: var(--gold);
+                text-decoration: none;
+            }
+
+        #back-to-top {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            width: 44px;
+            height: 44px;
+            background: var(--gold);
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s, transform 0.3s;
+            z-index: 998;
+            text-decoration: none;
+        }
+
+            #back-to-top.visible {
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            #back-to-top:hover {
+                transform: translateY(-4px);
+            }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            nav {
+                display: none;
+            }
+
+                nav.open {
+                    display: flex;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: var(--dark);
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 998;
+                }
+
+                    nav.open ul {
+                        flex-direction: column;
+                        gap: 28px;
+                        text-align: center;
+                    }
+
+                        nav.open ul li a {
+                            font-size: 1.1rem;
+                        }
+
+            .mobile-nav-toggle {
+                display: block;
+                z-index: 999;
+                position: relative;
+            }
+
+            .large-scale-inner {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .services-detail-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+
+                .process-steps::before {
+                    display: none;
+                }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+
+            .cta-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .scale-stat-cluster {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top header-inner-pages">
-    <div class="container d-flex align-items-center">
-
-      <h1 class="logo me-auto">
-        <a href="index.html">
-          <img src="2D on transparent background.png" style="width: 125px;">
-        </a>
-      </h1>
-       <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
-    <div class="container d-flex align-items-center">
-
-      <h1 class="logo me-auto">
-        <a href="index.html">
-          <img src="2D on transparent background.png" width="125" height="">
-        </a>
-      </h1>
-      
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="index.html">About</a></li>
-          <li><a class="nav-link scrollto" href="inner-page.html">Services</a></li>
-          <li><a class="nav-link   scrollto" href="recruitment.html">Recruitment</a></li>
-          <li><a class="nav-link scrollto" href="portfolio-details.html">Job Seekers</a></li>
-         
-          <li><a class="nav-link scrollto" href="contact.html">Contact</a></li>
-          <li><a class="getstarted scrollto" href="index.html">Get Started</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-      
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-      <!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-
-  <main id="main">
-
-    <!-- ======= Breadcrumbs ======= -->
-    <!-- End Breadcrumbs -->
-
-   
-  </main><!-- End #main -->
-<br><br>
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team section-bg">
-        <div class="container" data-aos="fade-up">
-  
-          <div class="section-title">
-            <h2>Large Scale Employment Assignments</h2>
-            <p>Large scale recruitment is becoming increasingly important for business start-ups, time-sensitive projects, or overseas outsourcing. East African individuals are highly educated and ready to travel to any areas which are safe but provide excellent working conditions and career growth.</p>
-          </div>
-  
-          <div class="row">
-  
-            <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
-              <div class="member d-flex align-items-start">
-                <div class="pic"><img src="brain.jpg" class="img-fluid" alt=""></div>
-                <div class="member-info">
-                  <h4>Psychometric
-                    Testing</h4>
-                  <span>We can provide an objective evaluation of a persons (or a teams) character, strengths, weaknesses and working style.r</span>
-                  <p>zian Agency have led the development of international psychometric tools in Africa to help organisations understand their people’s ability to perform in a role and deliver business results.</p>
-                 
-                </div>
-              </div>
-            </div>
-  
-            <div class="col-lg-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="200">
-              <div class="member d-flex align-items-start">
-                <div class="pic"><img src="audit-blue.png" class="img-fluid" alt=""></div>
-                <div class="member-info">
-                  <h4>Human Resource
-                    Audits</h4>
-                  <span>We can help ensure your HR policies, procedures and practices are legal and effective. Our teams experience across the dynamic market environments in Africa will be invaluable to setup the effectiveness of the HR function in compliance and functional areas in order to achieve your organisational goals and keep competitive.</span>
-                  <p> Talk to us today about recent projects we have undertaken.</p>
-                  
-                </div>
-              </div>
-            </div>
-  
-            <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
-              <div class="member d-flex align-items-start">
-                <div class="pic"><img src="payroll-salary.png" class="img-fluid" alt=""></div>
-                <div class="member-info">
-                  <h4>Payroll
-                    Support</h4>
-                  <span>Let us manage processing your payroll and maintaining the employee database regarding salary and pay.</span>
-                  <p>Zian’s unparalleled knowledge of local market conditions in Africa can help manage your company budget, compensation / pay equity challenges and legal compliance.</p>
-                  
-                </div>
-              </div>
-            </div>
-  
-            <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
-              <div class="member d-flex align-items-start">
-                <div class="pic"><img src="perfomance.png" class="img-fluid" alt=""></div>
-                <div class="member-info">
-                  <h4>Performance Evaluations
-                    & Succession
-                    Planning</h4>
-                  <span>Let us help you integrate performance management into practice to ensure your company’s policies, practices and goals work together seamlessly. </span>
-                  <p>Combined with succession planning we can help you create a pool of qualified candidates and plan for your company’s future.</p>
-                 
-              </div>
-            </div>
-  
-          </div>
-  
-        </div>
-      </section><!-- End Team Section -->
-  
-      
-  
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-  
-      <div class="footer-newsletter">
+    <!-- HEADER -->
+    <header id="header">
         <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-6">
-              <h4>Join Our Newsletter</h4>
-              <p>Feel free to reach out to us! We'd love to hear from you and assist you on your journey. Get in touch today for personalized support and expert guidance.</p>
-              <form action="https://formsubmit.co/enquiry@zianagency.co.ke"method="post" class="form-box">
-                <input type="email" name="email"><input type="submit" value="Subscribe">
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-  
-            <div class="col-lg-3 col-md-6 footer-contact">
-              <h1 class="logo me-auto">
+            <h1 class="logo me-auto">
                 <a href="index.html">
-                  <img src="2D on transparent background.png" style="width: 125px;">
+                    <img src="2D on transparent background.png" style="width: 125px;">
                 </a>
-              </h1>
-              <p>
-                Nyali.Fidel Odinga Rd. East Wing <br>
-                Mombasa,  5338-80100<br>
-                Kenya <br><br>
-                <strong>Phone:</strong> +254113815796/+254716078596<br>
-                <strong>Email:</strong> enquiry@zianagency.co.ke<br>
-              </p>
-            </div>
-  
-            <div class="col-lg-3 col-md-6 footer-links">
-              <h4>Useful Links</h4>
-              <ul>
-                <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="inner-page.html">Services</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="recruitment.html">recruitment</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="contact.html">contact</a></li>
-              </ul>
-            </div>
-  
-            <div class="col-lg-3 col-md-6 footer-links">
-                <h4>Popular Jobs</h4>
+            </h1>
+            <nav id="navbar">
                 <ul>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#">Accountants</a></li>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#">Hospitality</a></li>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#">Managers</a></li>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#">Drivers</a></li>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#">Airport Attendants</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="inner-page.html">Services</a></li>
+                    <li><a href="recruitment.html" class="active">Recruitment</a></li>
+                    <li><a href="portfolio-details.html">Job Seekers</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
                 </ul>
-              </div>
-  
-            <div class="col-lg-3 col-md-6 footer-links">
-              <h4>Our Social Networks</h4>
-              <p>Connect with us across our social networks for the latest updates and engaging content.</p>
-              <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=100094303042295" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              </div>
+            </nav>
+            <i class="bi bi-list mobile-nav-toggle" id="mobile-toggle"></i>
+        </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+        <div class="page-hero-grid"></div>
+        <div class="container">
+            <div class="breadcrumb-trail">
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <span>Recruitment</span>
             </div>
-  
-          </div>
+            <div class="page-hero-tag">Large Scale Employment</div>
+            <h1>Recruitment That<br>Works at <em>Scale</em></h1>
+            <p>Large scale recruitment is becoming increasingly important for business start-ups, time-sensitive projects, and overseas outsourcing. East African individuals are highly educated and ready to travel to areas that offer excellent working conditions and career growth.</p>
         </div>
-      </div>
-  
-      <div class="container footer-bottom clearfix">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Zian Recruitment</span></strong>. All Rights Reserved
+    </div>
+
+    <!-- LARGE SCALE STATS -->
+    <section id="large-scale">
+        <div class="container">
+            <div class="large-scale-inner">
+                <div data-aos="fade-right">
+                    <div class="section-label">Why East Africa</div>
+                    <h2 class="section-heading">A Workforce <em>Ready</em> for the World</h2>
+                    <p class="section-body">East African professionals bring strong educational foundations, adaptability, and an eagerness to deliver results in international environments. We connect this talent pool with employers who need dependable, skilled workers — fast.</p>
+                    <p class="section-body" style="margin-top:20px;">Our large-scale recruitment solutions are designed to fill multiple vacancies simultaneously while maintaining the rigorous vetting standards each candidate deserves.</p>
+                </div>
+                <div data-aos="fade-left" data-aos-delay="100">
+                    <div class="scale-stat-cluster">
+                        <div class="scale-stat">
+                            <div class="scale-stat-num">500+</div>
+                            <div class="scale-stat-label">Total Placements</div>
+                        </div>
+                        <div class="scale-stat">
+                            <div class="scale-stat-num">15+</div>
+                            <div class="scale-stat-label">Countries Covered</div>
+                        </div>
+                        <div class="scale-stat">
+                            <div class="scale-stat-num">2023</div>
+                            <div class="scale-stat-label">Founded</div>
+                        </div>
+                        <div class="scale-stat">
+                            <div class="scale-stat-num">48hr</div>
+                            <div class="scale-stat-label">Avg. Shortlist Time</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="credits">
-            Designed by <a href="https://sagecope.github.io/agency/?fbclid=IwAR33QoWcBivJ31_GM_vxFyo9BwryuxAiBvVYFaj48OQjicd2LMl15k-IHdU">Sage Cope</a>
+    </section>
+
+    <!-- SERVICES DETAIL -->
+    <section id="services-detail">
+        <div class="container">
+            <div class="section-label" data-aos="fade-up">What We Deliver</div>
+            <h2 class="section-heading" data-aos="fade-up" data-aos-delay="50">Specialist <em>HR Services</em></h2>
+            <div class="services-detail-grid">
+
+                <div class="sd-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="sd-img-wrap">
+                        <!-- ORIGINAL IMAGE PATH RETAINED -->
+                        <img src="brain.jpg" alt="Psychometric Testing">
+                    </div>
+                    <div class="sd-body">
+                        <div class="sd-num">01</div>
+                        <h3>Psychometric Testing</h3>
+                        <p class="sd-lead">We provide an objective evaluation of a person's (or a team's) character, strengths, weaknesses, and working style.</p>
+                        <p>Zian Agency has led the development of international psychometric tools in Africa to help organisations understand their people's ability to perform in a role and deliver business results.</p>
+                    </div>
+                </div>
+
+                <div class="sd-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="sd-img-wrap">
+                        <!-- ORIGINAL IMAGE PATH RETAINED -->
+                        <img src="audit-blue.png" alt="HR Audits">
+                    </div>
+                    <div class="sd-body">
+                        <div class="sd-num">02</div>
+                        <h3>Human Resource Audits</h3>
+                        <p class="sd-lead">We help ensure your HR policies, procedures, and practices are legal and effective.</p>
+                        <p>Our team's experience across dynamic African market environments will be invaluable in setting up the effectiveness of your HR function — in compliance and functional areas — to achieve organisational goals and stay competitive. Talk to us today about recent projects we have undertaken.</p>
+                    </div>
+                </div>
+
+                <div class="sd-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="sd-img-wrap">
+                        <!-- ORIGINAL IMAGE PATH RETAINED -->
+                        <img src="payroll-salary.png" alt="Payroll Support">
+                    </div>
+                    <div class="sd-body">
+                        <div class="sd-num">03</div>
+                        <h3>Payroll Support</h3>
+                        <p class="sd-lead">Let us manage processing your payroll and maintaining the employee database regarding salary and pay.</p>
+                        <p>Zian's unparalleled knowledge of local market conditions in Africa can help manage your company's budget, compensation and pay equity challenges, and legal compliance requirements.</p>
+                    </div>
+                </div>
+
+                <div class="sd-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="sd-img-wrap">
+                        <!-- ORIGINAL IMAGE PATH RETAINED -->
+                        <img src="perfomance.png" alt="Performance Evaluations">
+                    </div>
+                    <div class="sd-body">
+                        <div class="sd-num">04</div>
+                        <h3>Performance Evaluations & Succession Planning</h3>
+                        <p class="sd-lead">Let us help you integrate performance management into practice so your company's policies, practices, and goals work together seamlessly.</p>
+                        <p>Combined with succession planning, we help you create a pool of qualified candidates and build a robust plan for your company's future leadership pipeline.</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </div>
-    </footer><!-- End Footer -->
-  
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    </section>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+    <!-- PROCESS -->
+    <section id="process">
+        <div class="container">
+            <div class="section-label" data-aos="fade-up">How It Works</div>
+            <h2 class="section-heading" data-aos="fade-up" data-aos-delay="50">Our <em>Placement</em> Process</h2>
+            <div class="process-steps">
+                <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-num">01</div>
+                    <h4>Brief & Requirements</h4>
+                    <p>We sit with your team to understand role requirements, company culture, timelines, and volume — whether it's one hire or one hundred.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="150">
+                    <div class="step-num">02</div>
+                    <h4>Sourcing & Screening</h4>
+                    <p>Our network and database surfaces qualified candidates quickly. Every applicant is screened, tested, and background-checked before you see them.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-num">03</div>
+                    <h4>Shortlist & Interviews</h4>
+                    <p>We present a curated shortlist. Interview coordination, psychometric results, and candidate profiles are delivered in one organised brief.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="250">
+                    <div class="step-num">04</div>
+                    <h4>Placement & Support</h4>
+                    <p>After selection, we manage visa documentation, pre-departure orientation, and post-placement follow-up to ensure smooth transitions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+    <!-- CTA -->
+    <section id="cta-band">
+        <div class="container">
+            <div class="cta-inner">
+                <h2>Need to fill roles<br><strong>fast and right?</strong></h2>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn-dark">Start a Conversation <i class="bi bi-arrow-right"></i></a>
+                    <a href="portfolio-details.html" class="btn-outline-dark">For Job Seekers</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="index.html" class="logo-text">ZIAN</a>
+                        <p>Kenya's premier recruitment and consultancy agency connecting talented professionals to life-changing opportunities at home and across the globe.</p>
+                        <div class="footer-contact-item"><i class="bx bx-map"></i><span>Nyali, Fidel Odinga Rd. East Wing, Mombasa 5338-80100, Kenya</span></div>
+                        <div class="footer-contact-item"><i class="bx bx-phone"></i><span>+254 113 815 796 / +254 716 078 596</span></div>
+                        <div class="footer-contact-item"><i class="bx bx-envelope"></i><span>enquiry@zianagency.co.ke</span></div>
+                        <div class="footer-socials">
+                            <a href="https://www.facebook.com/profile.php?id=100094303042295" class="footer-social"><i class="bx bxl-facebook"></i></a>
+                            <a href="#" class="footer-social"><i class="bx bxl-twitter"></i></a>
+                            <a href="#" class="footer-social"><i class="bx bxl-instagram"></i></a>
+                            <a href="#" class="footer-social"><i class="bx bxl-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Navigate</h5>
+                        <ul>
+                            <li><a href="index.html"><i class="bx bx-chevron-right"></i>Home</a></li>
+                            <li><a href="index.html#about"><i class="bx bx-chevron-right"></i>About Us</a></li>
+                            <li><a href="inner-page.html"><i class="bx bx-chevron-right"></i>Services</a></li>
+                            <li><a href="recruitment.html"><i class="bx bx-chevron-right"></i>Recruitment</a></li>
+                            <li><a href="portfolio-details.html"><i class="bx bx-chevron-right"></i>Job Seekers</a></li>
+                            <li><a href="news.html"><i class="bx bx-chevron-right"></i>News & Blog</a></li>
+                            <li><a href="contact.html"><i class="bx bx-chevron-right"></i>Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Popular Jobs</h5>
+                        <ul>
+                            <li><a href="#"><i class="bx bx-chevron-right"></i>Accountants</a></li>
+                            <li><a href="#"><i class="bx bx-chevron-right"></i>Hospitality</a></li>
+                            <li><a href="#"><i class="bx bx-chevron-right"></i>Managers</a></li>
+                            <li><a href="#"><i class="bx bx-chevron-right"></i>Drivers</a></li>
+                            <li><a href="#"><i class="bx bx-chevron-right"></i>Airport Attendants</a></li>
+                            <li><a href="#"><i class="bx bx-chevron-right"></i>Healthcare Workers</a></li>
+                            <li><a href="#"><i class="bx bx-chevron-right"></i>Engineers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Newsletter</h5>
+                        <p style="font-size:0.83rem;color:var(--text-muted);line-height:1.7;margin-bottom:0;">Get the latest job opportunities and agency news delivered to your inbox.</p>
+                        <form class="footer-newsletter-form" action="https://formsubmit.co/enquiry@zianagency.co.ke" method="post">
+                            <input type="email" name="email" placeholder="Your email">
+                            <button type="submit"><i class="bi bi-arrow-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 <strong>Zian Recruitment & Consultancy Agency Ltd.</strong> All Rights Reserved.</p>
+                <p>Designed by <a href="https://sagecope.github.io/agency/">Sage Cope</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" id="back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-out', once: true, offset: 60 });
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+            document.getElementById('back-to-top').classList.toggle('visible', window.scrollY > 400);
+        });
+        const toggle = document.getElementById('mobile-toggle');
+        const nav = document.getElementById('navbar');
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('open');
+            toggle.className = nav.classList.contains('open') ? 'bi bi-x mobile-nav-toggle' : 'bi bi-list mobile-nav-toggle';
+        });
+    </script>
 </body>
-
 </html>
