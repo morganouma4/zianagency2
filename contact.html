@@ -1,271 +1,990 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — Zian Recruitment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #C9A84C;
+            --gold-light: #E8C96A;
+            --dark: #0A0A0F;
+            --dark-2: #111118;
+            --dark-3: #1A1A24;
+            --mid: #2A2A38;
+            --light: #F8F6F0;
+            --text-muted: #8A8A9A;
+            --white: #FFFFFF;
+            --serif: 'Cormorant Garamond', Georgia, serif;
+            --sans: 'DM Sans', sans-serif;
+            --mono: 'DM Mono', monospace;
+        }
 
-  <title>Zian Recruitment Agency - contact us</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+        html {
+            scroll-behavior: smooth;
+        }
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+        body {
+            font-family: var(--sans);
+            background: var(--dark);
+            color: var(--light);
+            overflow-x: hidden;
+        }
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="2D on transparent background.png" rel="shortcut icon" type="image/png"/>
-  
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold);
+        }
 
+        /* HEADER */
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            padding: 20px 0;
+            transition: all 0.4s;
+        }
+
+            #header.scrolled {
+                background: rgba(10,10,15,0.95);
+                backdrop-filter: blur(12px);
+                padding: 12px 0;
+                border-bottom: 1px solid rgba(201,168,76,0.2);
+            }
+
+            #header .hdr-inner {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 1300px;
+                margin: 0 auto;
+                padding: 0 30px;
+            }
+
+        .logo-text {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 36px;
+        }
+
+            nav ul li a {
+                font-size: 0.8rem;
+                font-weight: 500;
+                color: rgba(248,246,240,0.7);
+                text-decoration: none;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                transition: color 0.3s;
+            }
+
+                nav ul li a:hover, nav ul li a.active {
+                    color: var(--gold);
+                }
+
+        .nav-cta {
+            background: var(--gold) !important;
+            color: var(--dark) !important;
+            padding: 10px 24px !important;
+            font-weight: 600 !important;
+        }
+
+        .mobile-nav-toggle {
+            display: none;
+            color: var(--gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* PAGE HERO */
+        .page-hero {
+            padding: 160px 0 80px;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-3) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+            .page-hero::before {
+                content: 'CONTACT';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-family: var(--serif);
+                font-size: 18vw;
+                font-weight: 700;
+                color: rgba(201,168,76,0.03);
+                white-space: nowrap;
+                pointer-events: none;
+            }
+
+            .page-hero .container {
+                max-width: 1300px;
+                margin: 0 auto;
+                padding: 0 30px;
+            }
+
+        .breadcrumb-trail {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+            .breadcrumb-trail a {
+                font-size: 0.75rem;
+                color: var(--text-muted);
+                text-decoration: none;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                transition: color 0.3s;
+            }
+
+                .breadcrumb-trail a:hover {
+                    color: var(--gold);
+                }
+
+            .breadcrumb-trail span {
+                font-size: 0.7rem;
+                color: var(--text-muted);
+            }
+
+            .breadcrumb-trail .current {
+                font-size: 0.75rem;
+                color: var(--gold);
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+            }
+
+        .page-hero h1 {
+            font-family: var(--serif);
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            font-weight: 300;
+            color: var(--white);
+            line-height: 1.1;
+        }
+
+            .page-hero h1 em {
+                font-style: italic;
+                color: var(--gold);
+            }
+
+        .page-hero p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-top: 16px;
+            max-width: 500px;
+        }
+
+        /* MAIN */
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        /* CONTACT INFO STRIP */
+        .contact-strip {
+            background: var(--gold);
+            padding: 0;
+        }
+
+        .strip-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .strip-item {
+            padding: 36px 40px;
+            border-right: 1px solid rgba(10,10,15,0.15);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+            .strip-item:last-child {
+                border-right: none;
+            }
+
+        .strip-icon {
+            width: 52px;
+            height: 52px;
+            background: rgba(10,10,15,0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: var(--dark);
+            flex-shrink: 0;
+        }
+
+        .strip-item h5 {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(10,10,15,0.6);
+            margin-bottom: 4px;
+        }
+
+        .strip-item p {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--dark);
+            line-height: 1.4;
+        }
+
+        /* CONTACT MAIN */
+        #contact-main {
+            background: var(--dark-2);
+        }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--gold);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+            .section-label::before {
+                content: '';
+                width: 24px;
+                height: 1px;
+                background: var(--gold);
+            }
+
+        .section-heading {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            font-weight: 300;
+            color: var(--white);
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+            .section-heading em {
+                font-style: italic;
+                color: var(--gold);
+            }
+
+        .section-body {
+            font-size: 0.93rem;
+            color: var(--text-muted);
+            line-height: 1.85;
+        }
+
+        .contact-sidebar-info {
+            margin-top: 48px;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .info-block {
+            padding: 24px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+            .info-block:last-child {
+                border-bottom: none;
+            }
+
+        .info-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(201,168,76,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .info-block h6 {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+
+        .info-block p {
+            font-size: 0.88rem;
+            color: var(--light);
+            line-height: 1.6;
+        }
+
+        .contact-socials {
+            margin-top: 36px;
+        }
+
+            .contact-socials h6 {
+                font-size: 0.72rem;
+                font-weight: 600;
+                letter-spacing: 0.15em;
+                text-transform: uppercase;
+                color: var(--text-muted);
+                margin-bottom: 16px;
+            }
+
+        .socials-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(201,168,76,0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+            .social-btn:hover {
+                background: var(--gold);
+                color: var(--dark);
+                border-color: var(--gold);
+            }
+
+        /* FORM */
+        .contact-form-wrap {
+            background: var(--dark-3);
+            padding: 52px 48px;
+        }
+
+        .form-title {
+            font-family: var(--serif);
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: var(--light);
+            margin-bottom: 8px;
+        }
+
+        .form-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 36px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+            .form-group label {
+                display: block;
+                font-size: 0.72rem;
+                font-weight: 600;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                color: var(--text-muted);
+                margin-bottom: 8px;
+            }
+
+            .form-group input,
+            .form-group textarea,
+            .form-group select {
+                width: 100%;
+                background: var(--dark-2);
+                border: 1px solid rgba(255,255,255,0.07);
+                padding: 14px 16px;
+                color: var(--light);
+                font-family: var(--sans);
+                font-size: 0.88rem;
+                outline: none;
+                transition: border-color 0.3s;
+                -webkit-appearance: none;
+            }
+
+                .form-group input:focus,
+                .form-group textarea:focus,
+                .form-group select:focus {
+                    border-color: var(--gold);
+                }
+
+            .form-group textarea {
+                resize: vertical;
+                min-height: 130px;
+            }
+
+            .form-group select option {
+                background: var(--dark-2);
+            }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--gold);
+            border: none;
+            padding: 18px 36px;
+            color: var(--dark);
+            font-family: var(--sans);
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+            .btn-submit:hover {
+                background: var(--gold-light);
+                transform: translateY(-2px);
+            }
+
+        /* MAP */
+        #map-section {
+            background: var(--dark);
+            padding: 0 0 100px;
+        }
+
+        .map-header {
+            text-align: center;
+            padding: 80px 0 48px;
+        }
+
+        .map-container {
+            position: relative;
+        }
+
+            .map-container iframe {
+                width: 100%;
+                height: 480px;
+                display: block;
+                border: none;
+                filter: grayscale(40%) invert(90%) contrast(85%);
+            }
+
+        .map-pin {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            background: var(--gold);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--dark);
+            pointer-events: none;
+            white-space: nowrap;
+        }
+
+            .map-pin::after {
+                content: '';
+                position: absolute;
+                bottom: -8px;
+                left: 50%;
+                transform: translateX(-50%);
+                border: 8px solid transparent;
+                border-top-color: var(--gold);
+                border-bottom: none;
+            }
+
+        /* FAQ */
+        #faq {
+            background: var(--dark-3);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .faq-list {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .faq-item {
+            background: var(--dark-2);
+            border-left: 3px solid transparent;
+            transition: all 0.3s;
+        }
+
+            .faq-item.open {
+                border-left-color: var(--gold);
+            }
+
+        .faq-question {
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+            .faq-question span {
+                font-size: 0.92rem;
+                font-weight: 500;
+                color: var(--light);
+            }
+
+            .faq-question i {
+                color: var(--gold);
+                font-size: 1rem;
+                transition: transform 0.3s;
+            }
+
+        .faq-item.open .faq-question i {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 24px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s;
+        }
+
+        .faq-item.open .faq-answer {
+            padding: 0 24px 20px;
+            max-height: 200px;
+        }
+
+        .faq-answer p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--dark);
+            border-top: 1px solid rgba(201,168,76,0.15);
+        }
+
+        .footer-bottom-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 0;
+        }
+
+            .footer-bottom-bar p {
+                font-size: 0.8rem;
+                color: var(--text-muted);
+            }
+
+            .footer-bottom-bar a {
+                color: var(--gold);
+                text-decoration: none;
+            }
+
+        /* BACK TO TOP */
+        #back-to-top {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            width: 44px;
+            height: 44px;
+            background: var(--gold);
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s, transform 0.3s;
+            z-index: 998;
+            text-decoration: none;
+        }
+
+            #back-to-top.visible {
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            #back-to-top:hover {
+                transform: translateY(-4px);
+            }
+
+        @media (max-width: 992px) {
+            nav {
+                display: none;
+            }
+
+            .mobile-nav-toggle {
+                display: block;
+            }
+
+            nav.open {
+                display: flex;
+                position: fixed;
+                inset: 0;
+                background: var(--dark);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                z-index: 998;
+            }
+
+                nav.open ul {
+                    flex-direction: column;
+                    gap: 24px;
+                    text-align: center;
+                }
+
+            .contact-layout {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .strip-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .strip-item {
+                border-right: none;
+                border-bottom: 1px solid rgba(10,10,15,0.15);
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form-wrap {
+                padding: 36px 28px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .page-hero {
+                padding: 130px 0 60px;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top header-inner-pages">
-    <div class="container d-flex align-items-center">
-
-      <h1 class="logo me-auto">
-        <a href="index.html">
-          <img src="2D on transparent background.png" style="width: 125px;">
-        </a>
-      </h1>
-       <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
-    <div class="container d-flex align-items-center">
-
-      <h1 class="logo me-auto">
-        <a href="index.html">
-          <img src="2D on transparent background.png" style="width: 125px;">
-        </a>
-      </h1>
-      
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="index.html">About</a></li>
-          <li><a class="nav-link scrollto" href="inner-page.html">Services</a></li>
-          <li><a class="nav-link   scrollto" href="recruitment.html">Recruitment</a></li>
-          <li><a class="nav-link scrollto" href="portfolio-details.html">Job Seekers</a></li>
-         
-          <li><a class="nav-link scrollto" href="contact.html">Contact</a></li>
-          <li><a class="getstarted scrollto" href="index.html">Get Started</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-      
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-      <!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-
-  <main id="main">
-
-    <!-- ======= Breadcrumbs ======= -->
-    <!-- End Breadcrumbs -->
-
-   
-  </main><!-- End #main -->
-<br><br>
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-        <div class="container" data-aos="fade-up">
-  
-          <div class="section-title">
-            <h2>Contact</h2>
-            <p>Feel free to reach out to us! We'd love to hear from you and assist you on your journey. Get in touch today for personalized support and expert guidance</p>
-          </div>
-  
-          <div class="row">
-  
-            <div class="col-lg-5 d-flex align-items-stretch">
-              <div class="info">
-                <div class="address">
-                  <i class="bi bi-geo-alt"></i>
-                  <h4>Location:</h4>
-                  <p>Mombasa
-                    Nyali
-                    Ratna</p>
-                </div>
-  
-                <div class="email">
-                  <i class="bi bi-envelope"></i>
-                  <h4>Email:</h4>
-                  <p>enquiry@zianagency.co.ke</p>
-                </div>
-  
-                <div class="phone">
-                  <i class="bi bi-phone"></i>
-                  <h4>Call:</h4>
-                  <p>+254113815796 / +254716078596</p>
-                </div>
-  
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.869141600426!2d39.682084809445854!3d-4.047109695909636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x184012f227d1296f%3A0xd7c3bf3a7679513f!2sRatna%20Square%20Shopping%20Centre!5e0!3m2!1sen!2ske!4v1705654853377!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-  
-            </div>
-  
-            <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-              <form action="https://formsubmit.co/enquiry@zianagency.co.ke" method="post" role="form" class="php-email-form">
-                <!-- Replace "YOUR_FORMSUBMIT_ID" with your actual FormSubmit ID -->
-            
-                <div class="row">
-                  <div class="form-group col-md-6">
-                    <label for="name">Your Name</label>
-                    <input type="text" name="name" class="form-control" id="name" required>
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="name">Your Email</label>
-                    <input type="email" class="form-control" name="email" id="email" required>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="name">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject" required>
-                </div>
-                <div class="form-group">
-                  <label for="name">Message</label>
-                  <textarea class="form-control" name="message" rows="10" required></textarea>
-                </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
-              </form>
-            </div>
-            
-            
-  
-          </div>
-  
-        </div>
-      </section><!-- End Contact Section -->
-  
-    </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Stay informed and be the first to discover captivating content by joining our newsletter</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
+    <!-- HEADER -->
+    <header id="header">
+        <div class="hdr-inner">
             <h1 class="logo me-auto">
                 <a href="index.html">
-                  <img src="2D on transparent background.png" style="width: 125px;">
+                    <img src="2D on transparent background.png" style="width: 125px;">
                 </a>
-              </h1>
-              <p>
-                Nyali.Fidel Odinga Rd. East Wing <br>
-                Mombasa,  5338-80100<br>
-                Kenya <br><br>
-                <strong>Phone:</strong> +254113815796/+254716078596<br>
-                <strong>Email:</strong> enquiry@zianagency.co.ke<br>
-              </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="inner-page.html">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="recruitment.html">recruitment</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="contact.html">contact</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Popular Jobs</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Accountants</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Hospitality</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Managers</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Drivers</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Airport Attendants</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
-            <p>Connect with us across our social networks for the latest updates and engaging content.</p>
-            <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="https://www.facebook.com/profile.php?id=100094303042295" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            </div>
-          </div>
-
+            </h1>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="inner-page.html">Services</a></li>
+                    <li><a href="recruitment.html">Recruitment</a></li>
+                    <li><a href="portfolio-details.html">Job Seekers</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html" class="nav-cta active">Contact Us</a></li>
+                </ul>
+            </nav>
+            <i class="bi bi-list mobile-nav-toggle" id="mobile-toggle"></i>
         </div>
-      </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+        <div class="container">
+            <div class="breadcrumb-trail" data-aos="fade-up">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span class="current">Contact</span>
+            </div>
+            <h1 data-aos="fade-up" data-aos-delay="50">Get In <em>Touch</em><br>With Us</h1>
+            <p data-aos="fade-up" data-aos-delay="100">We'd love to hear from you. Whether you're a job seeker, employer, or partner — reach out and let's build something together.</p>
+        </div>
     </div>
 
-    <div class="container footer-bottom clearfix">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Zian Recruitment</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        Designed by <a href="https://sagecope.github.io/agency/?fbclid=IwAR33QoWcBivJ31_GM_vxFyo9BwryuxAiBvVYFaj48OQjicd2LMl15k-IHdU">Sage Cope</a>
-      </div>
+    <!-- CONTACT STRIP -->
+    <div class="contact-strip">
+        <div class="container" style="padding:0 30px;max-width:1300px;margin:0 auto;">
+            <div class="strip-grid">
+                <div class="strip-item">
+                    <div class="strip-icon"><i class="bx bx-map"></i></div>
+                    <div>
+                        <h5>Our Office</h5>
+                        <p>Nyali, Fidel Odinga Rd. East Wing<br>Mombasa 5338-80100, Kenya</p>
+                    </div>
+                </div>
+                <div class="strip-item">
+                    <div class="strip-icon"><i class="bx bx-phone"></i></div>
+                    <div>
+                        <h5>Call Us</h5>
+                        <p>+254 113 815 796<br>+254 716 078 596</p>
+                    </div>
+                </div>
+                <div class="strip-item">
+                    <div class="strip-icon"><i class="bx bx-envelope"></i></div>
+                    <div>
+                        <h5>Email Us</h5>
+                        <p>enquiry@zianagency.co.ke</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </footer><!-- End Footer -->
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- CONTACT MAIN -->
+    <section id="contact-main">
+        <div class="container">
+            <div class="contact-layout">
+                <!-- Sidebar -->
+                <div data-aos="fade-right">
+                    <div class="section-label">Reach Out</div>
+                    <h2 class="section-heading">Let's Start a <em>Conversation</em></h2>
+                    <p class="section-body">Whether you're exploring job opportunities abroad, looking to place skilled staff, or want to learn about our services — our team is ready to guide you every step of the way.</p>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+                    <div class="contact-sidebar-info">
+                        <div class="info-block">
+                            <div class="info-icon"><i class="bi bi-clock"></i></div>
+                            <div>
+                                <h6>Office Hours</h6>
+                                <p>Monday – Friday: 8:00 AM – 6:00 PM<br>Saturday: 9:00 AM – 1:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="info-block">
+                            <div class="info-icon"><i class="bx bx-time-five"></i></div>
+                            <div>
+                                <h6>Response Time</h6>
+                                <p>We respond to all enquiries within 24 business hours.</p>
+                            </div>
+                        </div>
+                        <div class="info-block">
+                            <div class="info-icon"><i class="bx bx-globe"></i></div>
+                            <div>
+                                <h6>International Enquiries</h6>
+                                <p>For overseas placement questions, please mention your country of interest when reaching out.</p>
+                            </div>
+                        </div>
+                    </div>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+                    <div class="contact-socials">
+                        <h6>Follow Us</h6>
+                        <div class="socials-row">
+                            <a href="https://www.facebook.com/profile.php?id=100094303042295" class="social-btn"><i class="bx bxl-facebook"></i></a>
+                            <a href="#" class="social-btn"><i class="bx bxl-twitter"></i></a>
+                            <a href="#" class="social-btn"><i class="bx bxl-instagram"></i></a>
+                            <a href="#" class="social-btn"><i class="bx bxl-linkedin"></i></a>
+                            <a href="#" class="social-btn"><i class="bx bxl-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Form -->
+                <div data-aos="fade-left" data-aos-delay="100">
+                    <div class="contact-form-wrap">
+                        <div class="form-title">Send Us a Message</div>
+                        <div class="form-subtitle">Fill in the details below and we'll get back to you shortly.</div>
+                        <form action="https://formsubmit.co/enquiry@zianagency.co.ke" method="post">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" name="name" placeholder="John Kamau" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="john@email.com" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+254 7XX XXX XXX">
+                                </div>
+                                <div class="form-group">
+                                    <label for="enquiry">Enquiry Type</label>
+                                    <select id="enquiry" name="enquiry_type">
+                                        <option value="">— Select —</option>
+                                        <option>Job Placement (Local)</option>
+                                        <option>Job Placement (International)</option>
+                                        <option>Visa Assistance</option>
+                                        <option>Scholarship / University</option>
+                                        <option>Employer / Partner</option>
+                                        <option>General Enquiry</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="How can we help you?" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" placeholder="Tell us more about what you're looking for..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">Send Message <i class="bi bi-arrow-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAP -->
+    <section id="map-section">
+        <div class="container">
+            <div class="map-header" data-aos="fade-up">
+                <div class="section-label" style="justify-content:center;">Find Us</div>
+                <h2 class="section-heading" style="text-align:center;">Visit Our <em>Office</em></h2>
+                <p style="color:var(--text-muted);font-size:0.93rem;margin-top:8px;">Ratna Square Shopping Centre, Nyali, Mombasa</p>
+            </div>
+            <div class="map-container" data-aos="fade-up" data-aos-delay="100">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.869141600426!2d39.682084809445854!3d-4.047109695909636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x184012f227d1296f%3A0xd7c3bf3a7679513f!2sRatna%20Square%20Shopping%20Centre!5e0!3m2!1sen!2ske!4v1705654853377!5m2!1sen!2ske"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="container">
+            <div class="faq-grid">
+                <div data-aos="fade-right">
+                    <div class="section-label">Quick Answers</div>
+                    <h2 class="section-heading">Frequently Asked <em>Questions</em></h2>
+                    <p class="section-body" style="margin-top:12px;">Can't find what you need? Send us a message and our team will get back to you within 24 hours.</p>
+                    <a href="mailto:enquiry@zianagency.co.ke" style="display:inline-flex;align-items:center;gap:8px;margin-top:28px;color:var(--gold);font-size:0.82rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;">Email Us Directly <i class="bi bi-arrow-right"></i></a>
+                </div>
+                <div class="faq-list" data-aos="fade-left" data-aos-delay="100">
+                    <div class="faq-item open">
+                        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                            <span>How long does the placement process take?</span>
+                            <i class="bx bx-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The timeline varies depending on the destination country and role. Typically, local placements take 2–4 weeks, while international placements (including visa processing) can take 6–12 weeks.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                            <span>What documents do I need to apply?</span>
+                            <i class="bx bx-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You'll generally need a valid passport, national ID, updated CV, academic certificates, and passport-size photos. Additional requirements vary by destination and job type.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                            <span>Do you charge candidates a placement fee?</span>
+                            <i class="bx bx-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our fee structure depends on the placement type. Contact us for a transparent breakdown — we always ensure our candidates fully understand any costs before proceeding.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                            <span>Can employers contact Zian to source staff?</span>
+                            <i class="bx bx-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely. We work with employers both locally and internationally to source vetted, qualified candidates. Reach out via the contact form above to discuss your staffing needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-bottom-bar">
+                <p>&copy; 2024 <strong>Zian Recruitment & Consultancy Agency Ltd.</strong> All Rights Reserved.</p>
+                <p>Designed by <a href="https://sagecope.github.io/agency/">Sage Cope</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" id="back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-out', once: true, offset: 60 });
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+            document.getElementById('back-to-top').classList.toggle('visible', window.scrollY > 400);
+        });
+        const toggle = document.getElementById('mobile-toggle');
+        const nav = document.getElementById('navbar');
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('open');
+            toggle.className = nav.classList.contains('open') ? 'bi bi-x mobile-nav-toggle' : 'bi bi-list mobile-nav-toggle';
+        });
+    </script>
 </body>
-
 </html>
