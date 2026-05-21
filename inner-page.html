@@ -1,329 +1,1293 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services — Zian Recruitment Agency</title>
+    <meta name="description" content="Comprehensive HR and recruitment services by Zian Recruitment & Consultancy Agency — Kenya's gateway to global careers.">
 
-  <title>Zian Recruitment Agency</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="2D on transparent background.png" rel="shortcut icon" type="image/png" />
+    <style>
+        :root {
+            --gold: #C9A84C;
+            --gold-light: #E8C96A;
+            --gold-pale: #F5E9C8;
+            --dark: #0A0A0F;
+            --dark-2: #111118;
+            --dark-3: #1A1A24;
+            --mid: #2A2A38;
+            --light: #F8F6F0;
+            --text-muted: #8A8A9A;
+            --white: #FFFFFF;
+            --serif: 'Cormorant Garamond', Georgia, serif;
+            --sans: 'DM Sans', sans-serif;
+            --mono: 'DM Mono', monospace;
+        }
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--sans);
+            background: var(--dark);
+            color: var(--light);
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 2px;
+        }
+
+        /* HEADER */
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            padding: 20px 0;
+            transition: all 0.4s ease;
+        }
+
+            #header.scrolled {
+                background: rgba(10,10,15,0.95);
+                backdrop-filter: blur(12px);
+                padding: 12px 0;
+                border-bottom: 1px solid rgba(201,168,76,0.2);
+            }
+
+            #header .container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 1300px;
+                margin: 0 auto;
+                padding: 0 30px;
+            }
+
+        .logo-text {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 36px;
+        }
+
+            nav ul li a {
+                font-family: var(--sans);
+                font-size: 0.8rem;
+                font-weight: 500;
+                color: rgba(248,246,240,0.7);
+                text-decoration: none;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                transition: color 0.3s;
+                position: relative;
+            }
+
+                nav ul li a::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -4px;
+                    left: 0;
+                    width: 0;
+                    height: 1px;
+                    background: var(--gold);
+                    transition: width 0.3s;
+                }
+
+                nav ul li a:hover {
+                    color: var(--gold);
+                }
+
+                    nav ul li a:hover::after {
+                        width: 100%;
+                    }
+
+                nav ul li a.active {
+                    color: var(--gold);
+                }
+
+                    nav ul li a.active::after {
+                        width: 100%;
+                    }
+
+        .nav-cta {
+            background: var(--gold) !important;
+            color: var(--dark) !important;
+            padding: 10px 24px !important;
+            border-radius: 2px !important;
+            font-weight: 600 !important;
+        }
+
+            .nav-cta::after {
+                display: none !important;
+            }
+
+        .mobile-nav-toggle {
+            display: none;
+            color: var(--gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* PAGE HERO */
+        .page-hero {
+            position: relative;
+            padding: 180px 0 100px;
+            background: var(--dark-2);
+            overflow: hidden;
+        }
+
+            .page-hero::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(201,168,76,0.07) 0%, transparent 70%);
+                pointer-events: none;
+            }
+
+        .page-hero-grid {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.04;
+            background-image: linear-gradient(rgba(201,168,76,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.5) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .page-hero .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .breadcrumb-trail {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--mono);
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            letter-spacing: 0.1em;
+            margin-bottom: 28px;
+        }
+
+            .breadcrumb-trail a {
+                color: var(--gold);
+                text-decoration: none;
+            }
+
+            .breadcrumb-trail span {
+                color: var(--text-muted);
+            }
+
+        .page-hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--mono);
+            font-size: 0.72rem;
+            color: var(--gold);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+            .page-hero-tag::before {
+                content: '';
+                display: block;
+                width: 32px;
+                height: 1px;
+                background: var(--gold);
+            }
+
+        .page-hero h1 {
+            font-family: var(--serif);
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            font-weight: 300;
+            line-height: 1.05;
+            color: var(--white);
+            max-width: 700px;
+        }
+
+            .page-hero h1 em {
+                font-style: italic;
+                color: var(--gold);
+            }
+
+        .page-hero p {
+            font-size: 1rem;
+            color: rgba(248,246,240,0.6);
+            line-height: 1.85;
+            max-width: 560px;
+            margin-top: 24px;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--gold);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+            .section-label::before {
+                content: '';
+                width: 24px;
+                height: 1px;
+                background: var(--gold);
+            }
+
+        .section-heading {
+            font-family: var(--serif);
+            font-size: clamp(2.2rem, 4vw, 3.6rem);
+            font-weight: 300;
+            line-height: 1.15;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+            .section-heading em {
+                font-style: italic;
+                color: var(--gold);
+            }
+
+        .section-body {
+            font-size: 0.97rem;
+            color: var(--text-muted);
+            line-height: 1.85;
+            max-width: 580px;
+        }
+
+        /* HR HIGHLIGHT */
+        #hr-highlight {
+            background: var(--dark-3);
+        }
+
+        .hr-highlight-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hr-highlight-img {
+            position: relative;
+            overflow: hidden;
+        }
+
+            .hr-highlight-img img {
+                width: 100%;
+                height: 520px;
+                object-fit: cover;
+                filter: grayscale(15%);
+                display: block;
+            }
+
+            .hr-highlight-img::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 40%;
+                background: linear-gradient(to top, rgba(10,10,15,0.5), transparent);
+                pointer-events: none;
+            }
+
+        .img-badge {
+            position: absolute;
+            bottom: 28px;
+            left: 28px;
+            z-index: 2;
+            background: var(--gold);
+            padding: 18px 22px;
+        }
+
+        .img-badge-num {
+            font-family: var(--serif);
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--dark);
+            line-height: 1;
+        }
+
+        .img-badge-text {
+            font-size: 0.68rem;
+            color: var(--dark);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        .pillars {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            margin-top: 40px;
+        }
+
+        .pillar {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 22px 24px;
+            background: var(--dark-2);
+            border-left: 3px solid transparent;
+            transition: border-color 0.3s, background 0.3s;
+        }
+
+            .pillar:hover {
+                border-left-color: var(--gold);
+                background: var(--mid);
+            }
+
+        .pillar-icon {
+            width: 46px;
+            height: 46px;
+            background: rgba(201,168,76,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .pillar-text h5 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--light);
+            margin-bottom: 5px;
+        }
+
+        .pillar-text p {
+            font-size: 0.84rem;
+            color: var(--text-muted);
+            line-height: 1.65;
+        }
+
+        /* VISION / MISSION / GOAL CARDS */
+        #vmg {
+            background: var(--dark-2);
+        }
+
+        .vmg-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            margin-top: 56px;
+        }
+
+        .vmg-card {
+            background: var(--dark-3);
+            padding: 48px 36px;
+            position: relative;
+            overflow: hidden;
+            transition: background 0.4s;
+        }
+
+            .vmg-card:hover {
+                background: var(--mid);
+            }
+
+            .vmg-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 3px;
+                background: var(--gold);
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.4s;
+            }
+
+            .vmg-card:hover::before {
+                transform: scaleX(1);
+            }
+
+        .vmg-num {
+            font-family: var(--serif);
+            font-size: 5rem;
+            font-weight: 700;
+            color: rgba(201,168,76,0.07);
+            line-height: 1;
+            margin-bottom: 20px;
+            transition: color 0.4s;
+        }
+
+        .vmg-card:hover .vmg-num {
+            color: rgba(201,168,76,0.14);
+        }
+
+        .vmg-icon {
+            width: 52px;
+            height: 52px;
+            background: rgba(201,168,76,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 22px;
+        }
+
+        .vmg-card h3 {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--light);
+            margin-bottom: 14px;
+        }
+
+        .vmg-card p {
+            font-size: 0.87rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .vmg-values-box {
+            grid-column: span 3;
+            background: var(--dark);
+            border: 1px solid rgba(201,168,76,0.15);
+            padding: 40px 36px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+            margin-top: 24px;
+        }
+
+        .value-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        .value-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--gold);
+            flex-shrink: 0;
+            margin-top: 6px;
+        }
+
+        .value-item h6 {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--light);
+            margin-bottom: 4px;
+        }
+
+        .value-item p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* AWARDS */
+        #awards {
+            background: var(--dark-3);
+        }
+
+        .awards-intro {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 56px;
+            gap: 40px;
+        }
+
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+        }
+
+        .award-card {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+            .award-card:first-child {
+                grid-column: span 2;
+            }
+
+        .award-img {
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+            filter: grayscale(25%) brightness(0.8);
+            display: block;
+        }
+
+        .award-card:first-child .award-img {
+            height: 380px;
+        }
+
+        .award-card:hover .award-img {
+            transform: scale(1.05);
+            filter: grayscale(0%) brightness(0.75);
+        }
+
+        .award-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10,10,15,0.88) 0%, rgba(10,10,15,0.05) 55%);
+        }
+
+        .award-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 26px 24px;
+        }
+
+        .award-tag {
+            font-family: var(--mono);
+            font-size: 0.65rem;
+            color: var(--gold);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .award-title {
+            font-family: var(--serif);
+            font-size: 1.35rem;
+            font-weight: 400;
+            color: var(--white);
+        }
+
+        /* CTA BAND */
+        #cta-band {
+            background: var(--gold);
+            padding: 80px 0;
+        }
+
+        .cta-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 48px;
+        }
+
+        #cta-band h2 {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            font-weight: 300;
+            color: var(--dark);
+            line-height: 1.2;
+        }
+
+            #cta-band h2 strong {
+                font-weight: 700;
+            }
+
+        .cta-actions {
+            display: flex;
+            gap: 14px;
+            flex-shrink: 0;
+        }
+
+        .btn-dark {
+            background: var(--dark);
+            color: var(--gold);
+            padding: 16px 36px;
+            font-family: var(--sans);
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+            .btn-dark:hover {
+                background: var(--dark-3);
+                color: var(--gold-light);
+                transform: translateY(-2px);
+            }
+
+        .btn-outline-dark {
+            background: transparent;
+            color: var(--dark);
+            padding: 15px 36px;
+            font-family: var(--sans);
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 2px solid var(--dark);
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+            .btn-outline-dark:hover {
+                background: var(--dark);
+                color: var(--gold);
+            }
+
+        /* FOOTER */
+        footer {
+            background: var(--dark);
+            border-top: 1px solid rgba(201,168,76,0.15);
+        }
+
+        .footer-top {
+            padding: 80px 0 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+        }
+
+        .footer-brand p {
+            font-size: 0.87rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-top: 20px;
+            max-width: 300px;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 14px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+            .footer-contact-item i {
+                color: var(--gold);
+                margin-top: 2px;
+                flex-shrink: 0;
+            }
+
+        .footer-col h5 {
+            font-family: var(--serif);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--light);
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(201,168,76,0.2);
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+            .footer-col ul li a {
+                font-size: 0.85rem;
+                color: var(--text-muted);
+                text-decoration: none;
+                transition: color 0.3s;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+                .footer-col ul li a i {
+                    color: var(--gold);
+                    font-size: 0.7rem;
+                }
+
+                .footer-col ul li a:hover {
+                    color: var(--gold);
+                }
+
+        .footer-socials {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .footer-social {
+            width: 38px;
+            height: 38px;
+            border: 1px solid rgba(201,168,76,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+            .footer-social:hover {
+                background: var(--gold);
+                color: var(--dark);
+                border-color: var(--gold);
+            }
+
+        .footer-newsletter-form {
+            display: flex;
+            margin-top: 16px;
+        }
+
+            .footer-newsletter-form input {
+                flex: 1;
+                background: var(--dark-3);
+                border: 1px solid rgba(201,168,76,0.2);
+                border-right: none;
+                padding: 10px 16px;
+                color: var(--light);
+                font-family: var(--sans);
+                font-size: 0.82rem;
+                outline: none;
+            }
+
+            .footer-newsletter-form button {
+                background: var(--gold);
+                border: none;
+                padding: 10px 18px;
+                color: var(--dark);
+                font-size: 1rem;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+
+                .footer-newsletter-form button:hover {
+                    background: var(--gold-light);
+                }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 24px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+            .footer-bottom p {
+                font-size: 0.8rem;
+                color: var(--text-muted);
+            }
+
+            .footer-bottom a {
+                color: var(--gold);
+                text-decoration: none;
+            }
+
+        /* BACK TO TOP */
+        #back-to-top {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            width: 44px;
+            height: 44px;
+            background: var(--gold);
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s, transform 0.3s;
+            z-index: 998;
+            text-decoration: none;
+        }
+
+            #back-to-top.visible {
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            #back-to-top:hover {
+                transform: translateY(-4px);
+            }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            nav {
+                display: none;
+            }
+
+                nav.open {
+                    display: flex;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: var(--dark);
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 998;
+                }
+
+                    nav.open ul {
+                        flex-direction: column;
+                        gap: 28px;
+                        text-align: center;
+                    }
+
+                        nav.open ul li a {
+                            font-size: 1.1rem;
+                        }
+
+            .mobile-nav-toggle {
+                display: block;
+                z-index: 999;
+                position: relative;
+            }
+
+            .hr-highlight-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .vmg-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .vmg-values-box {
+                grid-column: span 2;
+            }
+
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .awards-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .award-card:first-child {
+                grid-column: span 2;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+
+            .cta-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .vmg-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .vmg-values-box {
+                grid-column: span 1;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .awards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .award-card:first-child {
+                grid-column: span 1;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .awards-intro {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top header-inner-pages">
-    <div class="container d-flex align-items-center">
-
-      <h1 class="logo me-auto">
-        <a href="index.html">
-          <img src="2D on transparent background.png" style="width: 125px;">
-        </a>
-      </h1>
-       <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
-    <div class="container d-flex align-items-center">
-
-      <h1 class="logo me-auto">
-        <a href="index.html">
-          <img src="2D on transparent background.png" width="125" height="">
-        </a>
-      </h1>
-      
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="index.html">About</a></li>
-          <li><a class="nav-link scrollto" href="inner-page.html">Services</a></li>
-          <li><a class="nav-link   scrollto" href="recruitment.html">Recruitment</a></li>
-          <li><a class="nav-link scrollto" href="portfolio-details.html">Job Seekers</a></li>
-         
-          <li><a class="nav-link scrollto" href="contact.html">Contact</a></li>
-          <li><a class="getstarted scrollto" href="index.html">Get Started</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-      
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-      <!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-
-  <main id="main">
-
-    <!-- ======= Breadcrumbs ======= -->
-    <!-- End Breadcrumbs -->
-
-   
-  </main><!-- End #main -->
-<br><br>
-   <!-- ======= Skills Section ======= -->
-   <section id="skills" class="skills">
-    <div class="container" data-aos="fade-up">
-
-      <div class="row">
-        <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-          <img src="HRServices-1536x603 - Copy.jpg" class="img-fluid" alt="">
-        </div>
-        <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-          <h3>Human Resource Services</h3>
-          <p class="fst-italic">
-            Zian Recruitment Agency offers top-notch Human Resource Services, tailored to meet your specific job recruitment needs. Our dedicated team of HR experts excels in identifying and selecting exceptional candidates for a wide range of job positions. Whether you're seeking skilled professionals or entry-level talent, our comprehensive HR solutions ensure a seamless recruitment process.
-          </p>
-
-         
-
-        </div>
-      </div>
-
-    </div>
-  </section><!-- End Skills Section -->
-
-  <!-- ======= Services Section ======= -->
-  <section id="services" class="services section-bg">
-    <div class="container" data-aos="fade-up">
-
-      <div class="section-title">
-        <h2>Services</h2>
-        <p style="text-align: left;">We pride ourselves on fostering lasting employer-employee relationships, ensuring your organization's success and growth. With Zian Recruitment Agency, finding the perfect match for your job vacancies has never been easier. Trust us for unparalleled HR Services that transform your hiring experience.</p>
-      </div>
-
-      <div class="row">
-        <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-          <div class="icon-box">
-            <div class="icon"><i class="bx bxl-dribbble"></i></div>
-            <h4><a href="">COMPANY
-
-              VISION</a></h4>
-            <p>Zian Recruitment and Consultancy Agency Limited aims at elimination of poverty by reducing unemployment rates through individual and corporate responsibilities and utilizing the locally and internationally available resources or opportunities.</p>
-          </div>
-        </div>
-
-        <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-          <div class="icon-box">
-            <div class="icon"><i class="bx bx-file"></i></div>
-            <h4><a href="" style="text-align: center;">COMPANY
-
-              MISSION </a></h4>
-            <p>The company promotes sustainable environmentally sound and cost effective practices in managing job allocations as a resource and connecting job seekers with employers, innovating technology, customer services consultancy and education.</p>
-          </div>
-        </div>
-
-        <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
-          <div class="icon-box">
-            <div class="icon"><i class="bx bx-tachometer"></i></div>
-            <h4><a href="">OUR GOAL</a></h4>
-            <p>We match highly qualified candidates with international companies seeking to fill key positions, fostering global talent acquisition and driving mutual success in the ever-evolving landscape of the professional world.</p>
-          </div>
-        </div>
-
-        <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
-          <div class="icon-box">
-            <div class="icon"><i class="bx bx-layer"></i></div>
-            <h4><a href="">Values</a></h4>
-            <p>In addition to the company's mission, vision, and goals, it's important to articulate the core values that guide decision-making and behavior within the organization.These values serve as the ethical foundation and principles that shape the company's culture. </p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section><!-- End Services Section -->
-
-   <!-- ======= Portfolio Section ======= -->
-   <section id="portfolio" class="portfolio">
-    <div class="container" data-aos="fade-up">
-
-      <div class="section-title">
-        <h2>Awards</h2>
-        <p style="text-align: left;">Zian Recruitment Agency, a distinguished leader in the industry, proudly showcases a gallery of images capturing their prestigious awards, a testament to their unparalleled excellence and commitment to delivering top-notch recruitment services.</p>
-      </div>
-
-
-      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-img"><img src="WhatsApp Image 2024-01-20 at 11.58.03 (3).jpeg" class="img-fluid" alt=""></div>
-          <div class="portfolio-info">
-            <h4>Awards</h4>
-            <p>Certificate</p>
-           
-           
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-img"><img src="WhatsApp Image 2024-01-20 at 11.58.02 (1).jpeg" class="img-fluid" alt=""></div>
-          <div class="portfolio-info">
-            <h4>Awards</h4>
-            <p>Award 1</p>
-           
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-img"><img src="WhatsApp Image 2024-01-20 at 11.58.02.jpeg" class="img-fluid" alt=""></div>
-          <div class="portfolio-info">
-            <h4>Awards</h4>
-            <p>Award</p>
-            
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-img"><img src="WhatsApp Image 2024-01-20 at 12.00.00.jpeg" class="img-fluid" alt=""></div>
-          <div class="portfolio-info">
-            <h4>Awards</h4>
-            <p>Award</p>
-           
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-img"><img src="WhatsApp Image 2024-01-20 at 12.00.53.jpeg" class="img-fluid" alt=""></div>
-          <div class="portfolio-info">
-            <h4>Awards</h4>
-            <p>Award</p>
-           
-          </div>
-        </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section><!-- End Portfolio Section -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Feel free to reach out to us! We'd love to hear from you and assist you on your journey. Get in touch today for personalized support and expert guidance.</p>
-            <form action="https://formsubmit.co/enquiry@zianagency.co.ke"method="post" class="form-box">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
+    <!-- HEADER -->
+    <header id="header">
+        <div class="container">
             <h1 class="logo me-auto">
-              <a href="index.html">
-                <img src="2D on transparent background.png" style="width: 125px;">
-              </a>
+                <a href="index.html">
+                    <img src="2D on transparent background.png" style="width: 125px;">
+                </a>
             </h1>
-            <p>
-              Nyali.Fidel Odinga Rd. East Wing <br>
-              Mombasa,  5338-80100<br>
-              Kenya <br><br>
-              <strong>Phone:</strong> +254113815796/+254716078596<br>
-              <strong>Email:</strong> enquiry@zianagency.co.ke<br>
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="inner-page.html">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="recruitment.html">recruitment</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="contact.html">contact</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Popular Jobs</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Accountants</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Hospitality</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Managers</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Drivers</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Airport Attendants</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
-            <p>Connect with us across our social networks for the latest updates and engaging content.</p>
-            <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="https://www.facebook.com/profile.php?id=100094303042295" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            </div>
-          </div>
-
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="inner-page.html" class="active">Services</a></li>
+                    <li><a href="recruitment.html">Recruitment</a></li>
+                    <li><a href="portfolio-details.html">Job Seekers</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+                </ul>
+            </nav>
+            <i class="bi bi-list mobile-nav-toggle" id="mobile-toggle"></i>
         </div>
-      </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+        <div class="page-hero-grid"></div>
+        <div class="container">
+            <div class="breadcrumb-trail">
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <span>Services</span>
+            </div>
+            <div class="page-hero-tag">Human Resource Services</div>
+            <h1>Recruitment <em>Solutions</em><br>Built for Impact</h1>
+            <p>Zian Recruitment Agency offers top-notch Human Resource Services tailored to meet your specific job recruitment needs — from talent sourcing to visa support and career consultancy.</p>
+        </div>
     </div>
 
-    <div class="container footer-bottom clearfix">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Zian Recruitment</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        Designed by <a href="https://sagecope.github.io/agency/?fbclid=IwAR33QoWcBivJ31_GM_vxFyo9BwryuxAiBvVYFaj48OQjicd2LMl15k-IHdU">Sage Cope</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
+    <!-- HR HIGHLIGHT -->
+    <section id="hr-highlight">
+        <div class="container">
+            <div class="hr-highlight-grid">
+                <div class="hr-highlight-img" data-aos="fade-right">
+                    <!-- ORIGINAL IMAGE PATH RETAINED -->
+                    <img src="HRServices-1536x603 - Copy.jpg" alt="Zian HR Services">
+                    <div class="img-badge">
+                        <div class="img-badge-num">500+</div>
+                        <div class="img-badge-text">Placements<br>Completed</div>
+                    </div>
+                </div>
+                <div data-aos="fade-left" data-aos-delay="100">
+                    <div class="section-label">Who We Are</div>
+                    <h2 class="section-heading">Connecting the <em>Right Talent</em> to the Right Role</h2>
+                    <p class="section-body">Our dedicated team of HR experts excels in identifying and selecting exceptional candidates for a wide range of positions. Whether you're seeking skilled professionals or entry-level talent, our comprehensive HR solutions ensure a seamless recruitment process from first interview to first day.</p>
+                    <div class="pillars">
+                        <div class="pillar" data-aos="fade-up" data-aos-delay="150">
+                            <div class="pillar-icon"><i class="bx bx-search-alt"></i></div>
+                            <div class="pillar-text">
+                                <h5>Talent Sourcing & Screening</h5>
+                                <p>Rigorous candidate vetting processes including skills assessments, background checks, and psychometric testing to surface only the best.</p>
+                            </div>
+                        </div>
+                        <div class="pillar" data-aos="fade-up" data-aos-delay="200">
+                            <div class="pillar-icon"><i class="bx bx-globe"></i></div>
+                            <div class="pillar-text">
+                                <h5>International Placement Network</h5>
+                                <p>Active employer partnerships across 15+ countries in the Middle East, Europe, and North America opening doors for Kenyan professionals.</p>
+                            </div>
+                        </div>
+                        <div class="pillar" data-aos="fade-up" data-aos-delay="250">
+                            <div class="pillar-icon"><i class="bx bx-handshake"></i></div>
+                            <div class="pillar-text">
+                                <h5>Lasting Employer-Employee Relationships</h5>
+                                <p>We don't just fill vacancies — we foster long-term working relationships that benefit both organisations and the individuals we place.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- VISION / MISSION / GOAL -->
+    <section id="vmg">
+        <div class="container">
+            <div class="section-label" data-aos="fade-up">Our Foundation</div>
+            <h2 class="section-heading" data-aos="fade-up" data-aos-delay="50">Vision, Mission <em>&amp; Goals</em></h2>
+            <div class="vmg-grid">
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+                <div class="vmg-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="vmg-num">01</div>
+                    <div class="vmg-icon"><i class="bx bxl-dribbble"></i></div>
+                    <h3>Company Vision</h3>
+                    <p>Zian Recruitment & Consultancy Agency Limited aims at elimination of poverty by reducing unemployment rates through individual and corporate responsibility, and by utilising locally and internationally available resources and opportunities.</p>
+                </div>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+                <div class="vmg-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="vmg-num">02</div>
+                    <div class="vmg-icon"><i class="bx bx-file"></i></div>
+                    <h3>Company Mission</h3>
+                    <p>The company promotes sustainable, environmentally sound, and cost-effective practices in managing job allocations as a resource — connecting job seekers with employers through technology, customer services, consultancy, and education.</p>
+                </div>
 
+                <div class="vmg-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="vmg-num">03</div>
+                    <div class="vmg-icon"><i class="bx bx-tachometer"></i></div>
+                    <h3>Our Goal</h3>
+                    <p>We match highly qualified candidates with international companies seeking to fill key positions, fostering global talent acquisition and driving mutual success in the ever-evolving landscape of the professional world.</p>
+                </div>
+
+                <div class="vmg-card vmg-values-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="vmg-icon"><i class="bx bx-layer"></i></div>
+                    <h3>Our Core Values</h3>
+                    <p style="font-size:0.87rem;color:var(--text-muted);line-height:1.75;max-width:640px;margin-top:8px;">These values serve as the ethical foundation and principles that shape our company culture and guide every decision we make.</p>
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <div class="value-dot"></div>
+                            <div>
+                                <h6>Integrity</h6>
+                                <p>Honest, transparent dealings with every client and candidate we work with.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-dot"></div>
+                            <div>
+                                <h6>Excellence</h6>
+                                <p>Consistently surpassing expectations in service quality and candidate delivery.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-dot"></div>
+                            <div>
+                                <h6>Empowerment</h6>
+                                <p>Building individual capacity and giving professionals the tools to thrive globally.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-dot"></div>
+                            <div>
+                                <h6>Innovation</h6>
+                                <p>Applying modern recruitment technology to solve today's hiring challenges.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- AWARDS -->
+    <section id="awards">
+        <div class="container">
+            <div class="awards-intro">
+                <div>
+                    <div class="section-label" data-aos="fade-up">Recognition</div>
+                    <h2 class="section-heading" data-aos="fade-up" data-aos-delay="50">Awards &amp; <em>Achievements</em></h2>
+                </div>
+                <p class="section-body" style="text-align:right;" data-aos="fade-up" data-aos-delay="100">Zian Recruitment Agency proudly showcases our industry recognition — a testament to unparalleled excellence and our commitment to delivering top-notch recruitment services.</p>
+            </div>
+            <div class="awards-grid">
+
+                <div class="award-card" data-aos="fade-up">
+                    <!-- ORIGINAL IMAGE PATHS RETAINED -->
+                    <img src="WhatsApp Image 2024-01-20 at 11.58.03 (3).jpeg" alt="Award Certificate" class="award-img">
+                    <div class="award-overlay"></div>
+                    <div class="award-info">
+                        <div class="award-tag">Certificate of Excellence</div>
+                        <div class="award-title">Industry Recognition Award</div>
+                    </div>
+                </div>
+
+                <div class="award-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="WhatsApp Image 2024-01-20 at 11.58.02 (1).jpeg" alt="Award 1" class="award-img">
+                    <div class="award-overlay"></div>
+                    <div class="award-info">
+                        <div class="award-tag">2023</div>
+                        <div class="award-title">Outstanding<br>Agency Award</div>
+                    </div>
+                </div>
+
+                <div class="award-card" data-aos="fade-up" data-aos-delay="150">
+                    <img src="WhatsApp Image 2024-01-20 at 11.58.02.jpeg" alt="Award" class="award-img">
+                    <div class="award-overlay"></div>
+                    <div class="award-info">
+                        <div class="award-tag">Achievement</div>
+                        <div class="award-title">Service<br>Excellence</div>
+                    </div>
+                </div>
+
+                <div class="award-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="WhatsApp Image 2024-01-20 at 12.00.00.jpeg" alt="Award" class="award-img">
+                    <div class="award-overlay"></div>
+                    <div class="award-info">
+                        <div class="award-tag">Recognition</div>
+                        <div class="award-title">Community<br>Impact Award</div>
+                    </div>
+                </div>
+
+                <div class="award-card" data-aos="fade-up" data-aos-delay="250">
+                    <img src="WhatsApp Image 2024-01-20 at 12.00.53.jpeg" alt="Award" class="award-img">
+                    <div class="award-overlay"></div>
+                    <div class="award-info">
+                        <div class="award-tag">2024</div>
+                        <div class="award-title">Growth &amp;<br>Innovation</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <section id="cta-band">
+        <div class="container">
+            <div class="cta-inner">
+                <h2>Ready to find your<br><strong>perfect candidate?</strong></h2>
+                <div class="cta-actions">
+                    <a href="recruitment.html" class="btn-dark">View Open Roles <i class="bi bi-arrow-right"></i></a>
+                    <a href="contact.html" class="btn-outline-dark">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="index.html" class="logo-text">ZIAN</a>
+                        <p>Kenya's premier recruitment and consultancy agency connecting talented professionals to life-changing opportunities at home and across the globe.</p>
+                        <div class="footer-contact-item"><i class="bx bx-map"></i><span>Nyali, Fidel Odinga Rd. East Wing, Mombasa 5338-80100, Kenya</span></div>
+                        <div class="footer-contact-item"><i class="bx bx-phone"></i><span>+254 113 815 796 / +254 716 078 596</span></div>
+                        <div class="footer-contact-item"><i class="bx bx-envelope"></i><span>enquiry@zianagency.co.ke</span></div>
+                        <div class="footer-socials">
+                            <a href="https://www.facebook.com/profile.php?id=100094303042295" class="footer-social"><i class="bx bxl-facebook"></i></a>
+                            <a href="#" class="footer-social"><i class="bx bxl-twitter"></i></a>
+                            <a href="#" class="footer-social"><i class="bx bxl-instagram"></i></a>
+                            <a href="#" class="footer-social"><i class="bx bxl-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Navigate</h5>
+                        <ul>
+                            <li><a href="index.html"><i class="bx bx-chevron-right"></i>Home</a></li>
+                            <li><a href="index.html#about"><i class="bx bx-chevron-right"></i>About Us</a></li>
+                            <li><a href="inner-page.html"><i class="bx bx-chevron-right"></i>Services</a></li>
+                            <li><a href="recruitment.html"><i class="bx bx-chevron-right"></i>Recruitment</a></li>
+                            <li><a href="portfolio-details.html"><i class="bx bx-chevron-right"></i>Job Seekers</a></li>
+                            <li><a href="news.html"><i class="bx bx-chevron-right"></i>News & Blog</a></li>
+                            <li><a href="contact.html"><i class="bx bx-chevron-right"></i>Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Popular Jobs</h5>
+                        <ul>
+                            <li><a href="#"><i class="bx bx-chevron-right"></i>Accountants</a></li>
+                            <li><a href="#"><i class="bx bx-chevron-right"></i>Hospitality</a></li>
+                            <li><a href="#"><i class="bx bx-chevron-right"></i>Managers</a></li>
+                            <li><a href="#"><i class="bx bx-chevron-right"></i>Drivers</a></li>
+                            <li><a href="#"><i class="bx bx-chevron-right"></i>Airport Attendants</a></li>
+                            <li><a href="#"><i class="bx bx-chevron-right"></i>Healthcare Workers</a></li>
+                            <li><a href="#"><i class="bx bx-chevron-right"></i>Engineers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Newsletter</h5>
+                        <p style="font-size:0.83rem;color:var(--text-muted);line-height:1.7;margin-bottom:0;">Get the latest job opportunities and agency news delivered to your inbox.</p>
+                        <form class="footer-newsletter-form" action="https://formsubmit.co/enquiry@zianagency.co.ke" method="post">
+                            <input type="email" name="email" placeholder="Your email">
+                            <button type="submit"><i class="bi bi-arrow-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 <strong>Zian Recruitment & Consultancy Agency Ltd.</strong> All Rights Reserved.</p>
+                <p>Designed by <a href="https://sagecope.github.io/agency/">Sage Cope</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" id="back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-out', once: true, offset: 60 });
+
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+            document.getElementById('back-to-top').classList.toggle('visible', window.scrollY > 400);
+        });
+
+        const toggle = document.getElementById('mobile-toggle');
+        const nav = document.getElementById('navbar');
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('open');
+            toggle.className = nav.classList.contains('open')
+                ? 'bi bi-x mobile-nav-toggle'
+                : 'bi bi-list mobile-nav-toggle';
+        });
+    </script>
 </body>
-
 </html>
